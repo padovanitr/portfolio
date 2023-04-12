@@ -1,5 +1,12 @@
+import { AppContainer } from './App.style'
+import Home from './ui/pages/Home/Home'
+
 function App() {
-  return <div className="App">app</div>
+  return (
+    <AppContainer>
+      <Home />
+    </AppContainer>
+  )
 }
 
 export default App
