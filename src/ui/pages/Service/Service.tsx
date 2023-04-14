@@ -3,7 +3,7 @@ import { ServiceTexts } from './Service.utils'
 
 export default function Service() {
   return (
-    <StyledContainer id="about">
+    <StyledContainer id="service">
       <ContentContainer>
         <StyledTitle variant="h2">{ServiceTexts.Title}</StyledTitle>
         <StyledDescription>{ServiceTexts.Description}</StyledDescription>

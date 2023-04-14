@@ -25,7 +25,7 @@ const baseTheme = createTheme({
       main: colors.mainBlack,
     },
     secondary: {
-      main: colors.pink,
+      main: colors.red,
     },
   },
   typography: {

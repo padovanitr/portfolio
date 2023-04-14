@@ -1,4 +1,5 @@
 import { AppBar, Box, Container, List, ListItem, Typography, css, styled } from '@mui/material'
+import { HashLink as Link } from 'react-router-hash-link'
 import { transientProps } from '../../utils/transientProps'
 import { colors } from '../../utils/colors'
 
@@ -67,8 +68,11 @@ export const StyledList = styled(List)(
   `
 )
 
-export const StyledListItem = styled(ListItem)(
-  ({ theme }) => css`
+export const StyledListItem = styled(
+  ListItem,
+  transientProps
+)<{ $isselected: boolean }>(
+  ({ theme, $isselected }) => css`
     display: flex;
     padding-left: 0;
     padding-top: 0;
@@ -76,15 +80,25 @@ export const StyledListItem = styled(ListItem)(
     padding-right: 0;
     margin-left: ${theme.spacing(2)};
     margin-right: ${theme.spacing(2)};
+    border-bottom: ${$isselected ? `2px solid ${colors.red}` : `2px solid transparent`};
   `
 )
 
-export const ListItemTypography = styled(Typography)(
-  ({ theme }) => css`
+export const ListItemTypography = styled(
+  Typography,
+  transientProps
+)<{ $isselected: boolean }>(
+  ({ theme, $isselected }) => css`
     font-size: 1rem;
     font-weight: 500;
-    color: ${colors.white};
+    color: ${$isselected ? colors.red : colors.white};
     padding: ${theme.spacing(4, 0)};
     font-family: Poppins, sans-serif;
+  `
+)
+
+export const StyledLink = styled(Link)(
+  ({ theme }) => css`
+    text-decoration: none;
   `
 )

@@ -1,6 +1,8 @@
 import { Box, ListItem, Typography } from '@mui/material'
+import { HashLink as Link } from 'react-router-hash-link'
 import { styled, css } from '@mui/material/styles'
 import { colors } from '../../utils/colors'
+import { transientProps } from '../../utils/transientProps'
 
 export const DrawerContainer = styled(Box)(
   ({ theme }) => css`
@@ -25,13 +27,24 @@ export const StyledListItem = styled(ListItem)(
   `
 )
 
-export const StyledPageText = styled(Typography)(
-  ({ theme }) => css`
+export const StyledPageText = styled(
+  Typography,
+  transientProps
+)<{ $isselected: boolean }>(
+  ({ theme, $isselected }) => css`
     font-size: 1rem;
     font-weight: 500;
-    color: ${colors.white};
+    color: ${$isselected ? colors.red : colors.white};
     font-family: Poppins, sans-serif;
     line-height: 140%;
+    width: 100%;
+    border-bottom: ${$isselected ? `2px solid ${colors.red}` : `2px solid transparent`};
+  `
+)
+
+export const StyledLink = styled(Link)(
+  ({ theme }) => css`
+    text-decoration: none;
     width: 100%;
   `
 )

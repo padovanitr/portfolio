@@ -1,11 +1,13 @@
-import { Box, IconButton, Link, SvgIcon, useMediaQuery, useTheme } from '@mui/material'
+import { Box, IconButton, SvgIcon, useMediaQuery, useTheme } from '@mui/material'
 import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import {
   LeftContent,
   ListItemTypography,
   RightContent,
   StyledAppBar,
   StyledContainer,
+  StyledLink,
   StyledList,
   StyledListItem,
   StyledNav,
@@ -15,10 +17,12 @@ import { HamburguerIcon } from '../../assets/icons'
 import NavbarDrawer from '../NavbarDrawer/NavbarDrawer'
 
 export default function NavBar() {
+  const location = useLocation()
   const [openDrawer, setOpenDrawer] = useState(false)
   const theme = useTheme()
   const desktopMatches = useMediaQuery(theme.breakpoints.up('lg'))
   const [isNavBarFixed, setIsNavBarFixed] = useState(false)
+  const selectedPage = location.hash
 
   const handleScroll = () => {
     const position = window.pageYOffset
@@ -46,10 +50,12 @@ export default function NavBar() {
             <StyledNav component="nav">
               <StyledList>
                 {pages.map(({ title, path }) => (
-                  <StyledListItem key={title}>
-                    <Link href={path}>
-                      <ListItemTypography>{title}</ListItemTypography>
-                    </Link>
+                  <StyledListItem key={title} $isselected={selectedPage === path}>
+                    <StyledLink to={path} smooth>
+                      <ListItemTypography $isselected={selectedPage === path}>
+                        {title}
+                      </ListItemTypography>
+                    </StyledLink>
                   </StyledListItem>
                 ))}
               </StyledList>

@@ -63,7 +63,7 @@ export const StyledNameTitle = styled(Typography)(
 export const StyledJobTitle = styled(Typography)(
   ({ theme }) => css`
     ${TitleMixin(theme)}
-    color: ${colors.pink};
+    color: ${colors.red};
     width: 100%;
   `
 )

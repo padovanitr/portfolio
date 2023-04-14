@@ -1,5 +1,12 @@
 import { Drawer, IconButton, List, SvgIcon } from '@mui/material'
-import { DrawerContainer, DrawerHeader, StyledListItem, StyledPageText } from './NavbarDrawer.style'
+import { useLocation } from 'react-router-dom'
+import {
+  DrawerContainer,
+  DrawerHeader,
+  StyledLink,
+  StyledListItem,
+  StyledPageText,
+} from './NavbarDrawer.style'
 import { CancelIcon } from '../../assets/icons'
 import { pages } from '../Navbar/Navbar.utils'
 
@@ -9,6 +16,9 @@ export interface NavbarDrawerProps {
 }
 
 export default function NavbarDrawer({ open, onClose }: NavbarDrawerProps) {
+  const location = useLocation()
+  const selectedPage = location.hash
+
   const handleClickItem = (pagePath: string) => {
     onClose()
   }
@@ -31,7 +41,9 @@ export default function NavbarDrawer({ open, onClose }: NavbarDrawerProps) {
         <List>
           {pages.map(({ title, path }) => (
             <StyledListItem key={title} onClick={() => handleClickItem(path)}>
-              <StyledPageText>{title}</StyledPageText>
+              <StyledLink to={path}>
+                <StyledPageText $isselected={selectedPage === path}>{title}</StyledPageText>
+              </StyledLink>
             </StyledListItem>
           ))}
         </List>

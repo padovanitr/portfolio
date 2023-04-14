@@ -4,13 +4,12 @@ import { colors } from '../../../utils/colors'
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
     background-color: ${colors.mainBlack};
-    height: auto;
+    height: 700px;
     width: 100%;
     margin: 0;
     padding: ${theme.spacing(7)};
     display: flex;
     align-items: baseline;
-    margin-bottom: 200px;
     justify-content: center;
 
     ${theme.breakpoints.up('lg')} {
