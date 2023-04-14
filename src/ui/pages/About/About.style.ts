@@ -4,13 +4,18 @@ import { colors } from '../../../utils/colors'
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
     background-color: ${colors.darkGray};
-    height: 882px;
+    height: auto;
     width: 100%;
     margin: 0;
-    padding: ${theme.spacing(5, 15)};
+    padding: ${theme.spacing(7)};
     display: flex;
     align-items: center;
     margin-bottom: 200px;
+
+    ${theme.breakpoints.up('lg')} {
+      height: 882px;
+      padding: ${theme.spacing(5, 15)};
+    }
   `
 )
 
@@ -19,16 +24,32 @@ export const ContentContainer = styled(Box)(
     display: flex;
     align-items: center;
     gap: ${theme.spacing(6)};
+    flex-direction: column;
+
+    ${theme.breakpoints.up('lg')} {
+      flex-direction: row;
+    }
   `
 )
 
 export const ImageContainer = styled(Box)(
   ({ theme }) => css`
     background-color: ${colors.mediumGray};
-    height: 640px;
-    width: 483px;
-    min-width: 483px;
+    height: 385px;
+    width: 100%;
+    min-width: 290px;
     border-radius: ${theme.shape.borderRadius}px;
+
+    ${theme.breakpoints.up('md')} {
+      height: 917px;
+      width: 483px;
+      min-width: 483px;
+    }
+
+    ${theme.breakpoints.up('lg')} {
+      height: 640px;
+      width: 483px;
+    }
   `
 )
 

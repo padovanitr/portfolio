@@ -10,7 +10,7 @@ import { AboutTexts } from './About.utils'
 
 export default function About() {
   return (
-    <StyledContainer>
+    <StyledContainer id="about">
       <ContentContainer>
         <ImageContainer>image</ImageContainer>
         <Box sx={{ maxWidth: '746px' }}>

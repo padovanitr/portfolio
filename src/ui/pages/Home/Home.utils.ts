@@ -1,5 +1,5 @@
 export enum HomeTexts {
   WelcomeText = 'Welcome to my portfolio',
-  NameText = "I'm Thiago Padovani",
+  NameText = "Hi, I'm Thiago Padovani",
   JobText = 'Software Developer',
 }

@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Container,
   IconButton,
   Menu,
   MenuItem,
@@ -10,7 +9,7 @@ import {
   Typography,
 } from '@mui/material'
 import { useEffect, useState } from 'react'
-import { StyledAppBar } from './Navbar.style'
+import { StyledAppBar, StyledContainer } from './Navbar.style'
 
 const pages = ['Products', 'Pricing', 'Blog']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
@@ -53,8 +52,8 @@ export default function NavBar() {
   }, [])
 
   return (
-    <StyledAppBar $fixedPosition={isNavBarFixed}>
-      <Container maxWidth="xl">
+    <StyledAppBar $fixedposition={isNavBarFixed}>
+      <StyledContainer maxWidth="xl" $fixedposition={isNavBarFixed}>
         <Toolbar disableGutters>
           <Typography
             variant="h6"
@@ -170,7 +169,7 @@ export default function NavBar() {
             </Menu>
           </Box>
         </Toolbar>
-      </Container>
+      </StyledContainer>
     </StyledAppBar>
   )
 }
