@@ -7,5 +7,7 @@ export const AppContainer = styled(Box)(
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    display: flex;
+    flex-direction: column;
   `
 )

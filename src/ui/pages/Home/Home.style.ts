@@ -14,10 +14,12 @@ export const TitleMixin = (theme: Theme) => css`
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
     background-color: ${colors.mainBlack};
-    height: 400px;
+    height: 680px;
     width: 100%;
     margin: 0;
-    padding: ${theme.spacing(10, 15)};
+    padding: ${theme.spacing(20, 15)};
+    display: flex;
+    align-items: center;
   `
 )
 
