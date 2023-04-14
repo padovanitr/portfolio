@@ -6,14 +6,17 @@ import {
   RightContent,
   StyledAppBar,
   StyledContainer,
+  StyledIconButton,
   StyledList,
   StyledListItem,
   StyledNav,
 } from './Navbar.style'
 import { pages } from './Navbar.utils'
-import { HamburguerIcon } from '../../assets/icons'
+import { CancelIcon, HamburguerIcon } from '../../assets/icons'
+import NavbarDrawer from '../NavbarDrawer/NavbarDrawer'
 
 export default function NavBar() {
+  const [openDrawer, setOpenDrawer] = useState(false)
   const theme = useTheme()
   const desktopMatches = useMediaQuery(theme.breakpoints.up('lg'))
   const [isNavBarFixed, setIsNavBarFixed] = useState(false)
@@ -53,8 +56,8 @@ export default function NavBar() {
           )}
         </LeftContent>
         <RightContent>
-          {!desktopMatches && (
-            <IconButton>
+          {!desktopMatches && !openDrawer && (
+            <IconButton onClick={() => setOpenDrawer(true)}>
               <SvgIcon
                 inheritViewBox
                 component={HamburguerIcon}
@@ -65,8 +68,21 @@ export default function NavBar() {
               />
             </IconButton>
           )}
+          {!desktopMatches && openDrawer && (
+            <StyledIconButton onClick={() => setOpenDrawer(false)}>
+              <SvgIcon
+                inheritViewBox
+                component={CancelIcon}
+                sx={{
+                  width: '30px',
+                  height: '30px',
+                }}
+              />
+            </StyledIconButton>
+          )}
         </RightContent>
       </StyledContainer>
+      {!desktopMatches && <NavbarDrawer open={openDrawer} onClose={() => setOpenDrawer(false)} />}
     </StyledAppBar>
   )
 }
