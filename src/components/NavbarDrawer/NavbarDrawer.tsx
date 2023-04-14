@@ -9,6 +9,10 @@ export interface NavbarDrawerProps {
 }
 
 export default function NavbarDrawer({ open, onClose }: NavbarDrawerProps) {
+  const handleClickItem = (pagePath: string) => {
+    onClose()
+  }
+
   return (
     <Drawer anchor="right" open={open} onClose={onClose}>
       <DrawerContainer>
@@ -25,9 +29,9 @@ export default function NavbarDrawer({ open, onClose }: NavbarDrawerProps) {
           </IconButton>
         </DrawerHeader>
         <List>
-          {pages.map((page) => (
-            <StyledListItem key={page}>
-              <StyledPageText>{page}</StyledPageText>
+          {pages.map(({ title, path }) => (
+            <StyledListItem key={title} onClick={() => handleClickItem(path)}>
+              <StyledPageText>{title}</StyledPageText>
             </StyledListItem>
           ))}
         </List>

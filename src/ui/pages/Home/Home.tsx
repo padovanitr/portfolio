@@ -4,7 +4,7 @@ import { HomeTexts } from './Home.utils'
 
 export default function Home() {
   return (
-    <StyledContainer>
+    <StyledContainer id="home">
       <Box sx={{ width: '100%' }}>
         <StyledSmallTitle>{HomeTexts.WelcomeText}</StyledSmallTitle>
         <StyledNameTitle>{HomeTexts.NameText}</StyledNameTitle>

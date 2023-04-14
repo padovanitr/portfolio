@@ -1,4 +1,4 @@
-import { Box, IconButton, SvgIcon, useMediaQuery, useTheme } from '@mui/material'
+import { Box, IconButton, Link, SvgIcon, useMediaQuery, useTheme } from '@mui/material'
 import { useEffect, useState } from 'react'
 import {
   LeftContent,
@@ -45,9 +45,11 @@ export default function NavBar() {
           {desktopMatches && (
             <StyledNav component="nav">
               <StyledList>
-                {pages.map((page) => (
-                  <StyledListItem key={page}>
-                    <ListItemTypography>{page}</ListItemTypography>
+                {pages.map(({ title, path }) => (
+                  <StyledListItem key={title}>
+                    <Link href={path}>
+                      <ListItemTypography>{title}</ListItemTypography>
+                    </Link>
                   </StyledListItem>
                 ))}
               </StyledList>
