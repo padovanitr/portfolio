@@ -3,8 +3,8 @@ import type { Shadows } from '@mui/material/styles/shadows'
 import { colors } from './utils/colors'
 
 const shadows = Array(25).fill('') as Shadows
-shadows[1] = '0px 0px 8px rgba(46, 49, 146, 0.15)'
-shadows[2] = '0px 4px 20px rgba(46, 49, 146, 0.18)'
+shadows[1] = '0px 0px 10px rgba(0, 0, 0, 0.15)'
+shadows[2] = '0px 4px 20px rgba(0, 0, 0, 0.18)'
 shadows[3] = '0px 4px 20px rgba(46, 49, 146, 0.08)'
 shadows[4] = '0px 0px 6px rgba(46, 49, 146, 0.18)'
 shadows[5] = '0px 4px 16px 0px rgba(92, 92, 92, 0.09)'

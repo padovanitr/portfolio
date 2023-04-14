@@ -14,6 +14,14 @@ export const StyledContainer = styled(Box)(
   `
 )
 
+export const ContentContainer = styled(Box)(
+  ({ theme }) => css`
+    display: flex;
+    align-items: center;
+    gap: ${theme.spacing(6)};
+  `
+)
+
 export const ImageContainer = styled(Box)(
   ({ theme }) => css`
     background-color: ${colors.mediumGray};
