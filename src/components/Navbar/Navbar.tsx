@@ -6,13 +6,12 @@ import {
   RightContent,
   StyledAppBar,
   StyledContainer,
-  StyledIconButton,
   StyledList,
   StyledListItem,
   StyledNav,
 } from './Navbar.style'
 import { pages } from './Navbar.utils'
-import { CancelIcon, HamburguerIcon } from '../../assets/icons'
+import { HamburguerIcon } from '../../assets/icons'
 import NavbarDrawer from '../NavbarDrawer/NavbarDrawer'
 
 export default function NavBar() {
@@ -67,18 +66,6 @@ export default function NavBar() {
                 }}
               />
             </IconButton>
-          )}
-          {!desktopMatches && openDrawer && (
-            <StyledIconButton onClick={() => setOpenDrawer(false)}>
-              <SvgIcon
-                inheritViewBox
-                component={CancelIcon}
-                sx={{
-                  width: '30px',
-                  height: '30px',
-                }}
-              />
-            </StyledIconButton>
           )}
         </RightContent>
       </StyledContainer>

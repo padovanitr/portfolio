@@ -1,4 +1,7 @@
-import { DrawerContainer, StyledDrawer } from './NavbarDrawer.style'
+import { Drawer, IconButton, List, SvgIcon } from '@mui/material'
+import { DrawerContainer, DrawerHeader, StyledListItem, StyledPageText } from './NavbarDrawer.style'
+import { CancelIcon } from '../../assets/icons'
+import { pages } from '../Navbar/Navbar.utils'
 
 export interface NavbarDrawerProps {
   open: boolean
@@ -7,8 +10,28 @@ export interface NavbarDrawerProps {
 
 export default function NavbarDrawer({ open, onClose }: NavbarDrawerProps) {
   return (
-    <StyledDrawer anchor="right" open={open} onClose={onClose}>
-      <DrawerContainer />
-    </StyledDrawer>
+    <Drawer anchor="right" open={open} onClose={onClose}>
+      <DrawerContainer>
+        <DrawerHeader>
+          <IconButton onClick={onClose}>
+            <SvgIcon
+              inheritViewBox
+              component={CancelIcon}
+              sx={{
+                width: '30px',
+                height: '30px',
+              }}
+            />
+          </IconButton>
+        </DrawerHeader>
+        <List>
+          {pages.map((page) => (
+            <StyledListItem key={page}>
+              <StyledPageText>{page}</StyledPageText>
+            </StyledListItem>
+          ))}
+        </List>
+      </DrawerContainer>
+    </Drawer>
   )
 }

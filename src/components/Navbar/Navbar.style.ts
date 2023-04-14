@@ -1,14 +1,4 @@
-import {
-  AppBar,
-  Box,
-  Container,
-  IconButton,
-  List,
-  ListItem,
-  Typography,
-  css,
-  styled,
-} from '@mui/material'
+import { AppBar, Box, Container, List, ListItem, Typography, css, styled } from '@mui/material'
 import { transientProps } from '../../utils/transientProps'
 import { colors } from '../../utils/colors'
 
@@ -96,17 +86,5 @@ export const ListItemTypography = styled(Typography)(
     color: ${colors.white};
     padding: ${theme.spacing(4, 0)};
     font-family: Poppins, sans-serif;
-  `
-)
-
-export const StyledIconButton = styled(IconButton)(
-  ({ theme }) => css`
-    position: fixed;
-    top: 28px;
-    right: 24px;
-    opacity: 1;
-    visibility: visible;
-    z-index: 99999;
-    display: block;
   `
 )
