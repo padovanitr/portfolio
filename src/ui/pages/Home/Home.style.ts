@@ -19,22 +19,23 @@ export const TitleMixin = (theme: Theme) => css`
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
     background-color: ${colors.mainBlack};
-    height: 680px;
+    height: auto;
     width: 100%;
     margin: 0;
-    padding: ${theme.spacing(20, 5)};
+    padding: ${theme.spacing(16, 5)};
     display: flex;
     align-items: center;
 
     ${theme.breakpoints.up('lg')} {
       padding: ${theme.spacing(20, 15)};
+      height: 680px;
     }
   `
 )
 
 export const StyledSmallTitle = styled(Typography)(
   ({ theme }) => css`
-    font-size: 15px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 4px;
     display: block;
@@ -42,6 +43,12 @@ export const StyledSmallTitle = styled(Typography)(
     color: ${colors.gray};
     line-height: normal;
     width: 100%;
+    margin-top: ${theme.spacing(4)};
+
+    ${theme.breakpoints.up('md')} {
+      margin-top: 0;
+      font-size: 15px;
+    }
   `
 )
 
