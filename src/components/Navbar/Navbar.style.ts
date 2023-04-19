@@ -80,7 +80,18 @@ export const StyledListItem = styled(
     padding-right: 0;
     margin-left: ${theme.spacing(2)};
     margin-right: ${theme.spacing(2)};
-    border-bottom: ${$isselected ? `2px solid ${colors.red}` : `2px solid transparent`};
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: ${colors.red};
+      transition: 0.3s;
+      bottom: 0;
+      width: ${$isselected ? '100%' : '0%'};
+    }
   `
 )
 
