@@ -16,6 +16,9 @@ export const useGetSelectedSectionScroll = () => {
       case position >= 1400 && position < 2300:
         setSelectedSelection('#service')
         break
+      case position >= 2300 && position < 3000:
+        setSelectedSelection('#articles')
+        break
       default:
         break
     }
