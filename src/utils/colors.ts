@@ -8,4 +8,7 @@ export const colors = {
   mediumGray: '#1f1f1f',
   lightGray: '#c6c9d8bf',
   white: '#ffffff',
+  errorRed: '##D32F2F',
+  heatherGray: '#BCBEC0',
+  borderColorGray: '#c6c9d8bf',
 } as const

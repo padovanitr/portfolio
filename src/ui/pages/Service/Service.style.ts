@@ -3,7 +3,7 @@ import { colors } from '../../../utils/colors'
 
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
-    background-color: ${colors.mainBlack};
+    background-color: ${colors.secondaryBlack};
     height: 700px;
     width: 100%;
     margin: 0;
