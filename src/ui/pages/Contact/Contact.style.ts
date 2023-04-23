@@ -14,8 +14,7 @@ export const StyledContainer = styled(Box)(
     flex-direction: column;
 
     ${theme.breakpoints.up('lg')} {
-      height: 882px;
-      padding: ${theme.spacing(13, 15)};
+      padding: ${theme.spacing(10, 15, 20)};
     }
   `
 )
