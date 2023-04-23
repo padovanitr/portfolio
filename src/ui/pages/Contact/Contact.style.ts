@@ -4,7 +4,7 @@ import { colors } from '../../../utils/colors'
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
     background-color: ${colors.secondaryBlack};
-    height: 700px;
+    height: fit-content;
     width: 100%;
     margin: 0;
     padding: ${theme.spacing(7)};
@@ -29,6 +29,13 @@ export const ContentContainer = styled(Box)(
   `
 )
 
+export const FormWrapper = styled(Box)(
+  ({ theme }) => css`
+    width: 100%;
+    margin-top: ${theme.spacing(3)};
+  `
+)
+
 export const StyledTitle = styled(Typography)(
   ({ theme }) => css`
     color: ${colors.white};
@@ -49,20 +56,24 @@ export const StyledDescription = styled(Typography)(
     font-family: Poppins, sans-serif;
     font-weight: 300;
     line-height: 30px;
-    text-align: center;
+    text-align: left;
+
+    ${theme.breakpoints.up('lg')} {
+      text-align: center;
+    }
   `
 )
 
 export const StyledTextarea = styled(TextField)(
   ({ theme }) => css`
-    &.MuiInputLabel-root {
-      font-size: 1rem;
+    & .MuiFormLabel-root {
       color: ${colors.heatherGray};
-      transition: ${theme.transitions.create(['font-size', 'transform', 'color'])};
+      font-size: 1rem;
     }
 
-    &&& .MuiFilledInput-root {
-      height: fit-content;
+    & .MuiInputBase-input {
+      height: 275px;
+      padding: ${theme.spacing(2.5, 2)};
     }
 
     & .${inputBaseClasses.root} {
@@ -78,7 +89,7 @@ export const StyledTextarea = styled(TextField)(
 
 export const StyledTextField = styled(TextField)(
   ({ theme }) => css`
-    & .MuiInputLabel-root {
+    & .MuiFormLabel-root {
       color: ${colors.heatherGray};
       font-size: 1rem;
     }

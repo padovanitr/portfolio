@@ -4,7 +4,7 @@ import { colors } from '../../../utils/colors'
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
     background-color: ${colors.darkGray};
-    height: auto;
+    height: 700px;
     width: 100%;
     margin: 0;
     padding: ${theme.spacing(7)};
