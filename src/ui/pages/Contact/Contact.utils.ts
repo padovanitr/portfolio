@@ -5,6 +5,7 @@ export enum ContactTexts {
   EmailFieldLabel = 'Email',
   SubjectFieldLabel = 'Subject',
   MessageFieldLabel = 'Message',
+  SendButtonLabel = 'Send',
 }
 
 export enum ContactFieldsNames {

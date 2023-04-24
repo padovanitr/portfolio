@@ -1,4 +1,5 @@
 import { Box, Button, TextField, Typography, css, inputBaseClasses, styled } from '@mui/material'
+import { Form } from 'formik'
 import { colors } from '../../../utils/colors'
 
 export const StyledContainer = styled(Box)(
@@ -32,6 +33,8 @@ export const FormWrapper = styled(Box)(
   ({ theme }) => css`
     width: 100%;
     margin-top: ${theme.spacing(3)};
+    display: flex;
+    justify-content: space-between;
   `
 )
 
@@ -152,5 +155,19 @@ export const StyledButton = styled(Button)(
     ${theme.breakpoints.up('md')} {
       width: 160px;
     }
+  `
+)
+
+export const StyledImage = styled(`img`)(
+  ({ theme }) => css`
+    width: 650px;
+    height: 450px;
+    border-radius: 5px;
+  `
+)
+
+export const StyledForm = styled(Form)(
+  () => css`
+    width: 100%;
   `
 )

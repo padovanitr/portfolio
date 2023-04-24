@@ -1,11 +1,14 @@
 import { Form, FormikProvider, useFormik } from 'formik'
 import { Grid } from '@mui/material'
+import ContactBg from '../../../assets/img/contactBg.webp'
 import {
   ContentContainer,
   FormWrapper,
   StyledButton,
   StyledContainer,
   StyledDescription,
+  StyledForm,
+  StyledImage,
   StyledTextField,
   StyledTextarea,
   StyledTitle,
@@ -28,8 +31,8 @@ export default function Contact() {
       </ContentContainer>
       <FormWrapper>
         <FormikProvider value={formik}>
-          <Form>
-            <Grid container flexDirection="column" gap={2} mt={2} sx={{ maxWidth: '500px' }}>
+          <StyledForm>
+            <Grid container flexDirection="column" gap={2} sx={{ maxWidth: '500px' }}>
               <StyledTextField
                 name={ContactFieldsNames.NameField}
                 label={ContactTexts.NameFieldLabel}
@@ -50,11 +53,12 @@ export default function Contact() {
                 maxRows={12.5}
               />
               <StyledButton type="submit" variant="contained">
-                Send
+                {ContactTexts.SendButtonLabel}
               </StyledButton>
             </Grid>
-          </Form>
+          </StyledForm>
         </FormikProvider>
+        <StyledImage src={ContactBg} />
       </FormWrapper>
     </StyledContainer>
   )
