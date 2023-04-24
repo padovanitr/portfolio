@@ -12,6 +12,7 @@ export const StyledAppBar = styled(
     position: ${$fixedposition ? 'fixed' : 'absolute'};
     transition: 0.3s;
     background-color: ${$fixedposition ? colors.darkGray : 'transparent'};
+    background-image: none;
     box-shadow: ${$fixedposition ? theme.shadows[1] : 'none'};
     padding: ${theme.spacing(1, 3)};
 

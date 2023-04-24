@@ -3,7 +3,7 @@ import { colors } from '../../../utils/colors'
 
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
-    background-color: ${colors.secondaryBlack};
+    background-color: ${theme.palette.primary.main};
     height: fit-content;
     width: 100%;
     margin: 0;
@@ -132,6 +132,7 @@ export const StyledButton = styled(Button)(
     &:hover {
       background-color: transparent;
       border: 1px solid ${colors.red};
+      color: ${theme.palette.primary.contrastText};
     }
 
     ${theme.breakpoints.up('md')} {
