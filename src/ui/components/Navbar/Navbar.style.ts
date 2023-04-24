@@ -11,7 +11,7 @@ export const StyledAppBar = styled(
     border: none;
     position: ${$fixedposition ? 'fixed' : 'absolute'};
     transition: 0.3s;
-    background-color: ${$fixedposition ? colors.darkGray : 'transparent'};
+    background-color: ${$fixedposition ? theme.palette.background.paper : 'transparent'};
     background-image: none;
     box-shadow: ${$fixedposition ? theme.shadows[1] : 'none'};
     padding: ${theme.spacing(1, 3)};
@@ -103,7 +103,7 @@ export const ListItemTypography = styled(
   ({ theme, $isselected }) => css`
     font-size: 1rem;
     font-weight: 500;
-    color: ${$isselected ? colors.red : colors.white};
+    color: ${$isselected ? colors.red : theme.palette.primary.contrastText};
     padding: ${theme.spacing(4, 0)};
     font-family: Poppins, sans-serif;
   `

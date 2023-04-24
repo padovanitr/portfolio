@@ -3,7 +3,7 @@ import { createContext, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
 import { colors } from './colors'
 
-const ColorModeContext = createContext({ toggleColorMode: () => {} })
+export const ColorModeContext = createContext({ toggleColorMode: () => {} })
 
 export interface ColorModeContextProviderProps {
   children: ReactNode | JSX.Element | JSX.Element[]
@@ -43,11 +43,16 @@ export default function ColorModeContextProvider({ children }: ColorModeContextP
         palette: {
           mode,
           primary: {
-            main: mode === 'dark' ? colors.mainBlack : '#fff',
+            main: mode === 'dark' ? colors.mainBlack : colors.white,
             contrastText: mode === 'dark' ? colors.white : colors.darkGray,
           },
           secondary: {
             main: colors.red,
+            contrastText: mode === 'dark' ? colors.lightGray : colors.textGrayLight,
+          },
+          background: {
+            default: mode === 'dark' ? colors.mainBlack : colors.backgroundLightGray,
+            paper: mode === 'dark' ? colors.darkGray : colors.white,
           },
         },
         typography: {

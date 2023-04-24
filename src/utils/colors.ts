@@ -7,8 +7,10 @@ export const colors = {
   darkGray: '#191919',
   mediumGray: '#1f1f1f',
   lightGray: '#c6c9d8bf',
+  backgroundLightGray: '#e8e7ec',
   white: '#ffffff',
   errorRed: '##D32F2F',
   heatherGray: '#BCBEC0',
   borderColorGray: '#c6c9d8bf',
+  textGrayLight: '#717173',
 } as const

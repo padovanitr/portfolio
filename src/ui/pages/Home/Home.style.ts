@@ -18,7 +18,7 @@ export const TitleMixin = (theme: Theme) => css`
 
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
-    background-color: ${theme.palette.primary.main};
+    background-color: ${theme.palette.background.default};
     height: auto;
     width: 100%;
     margin: 0;
@@ -40,7 +40,7 @@ export const StyledSmallTitle = styled(Typography)(
     letter-spacing: 4px;
     display: block;
     margin-bottom: 20px;
-    color: ${colors.gray};
+    color: ${theme.palette.mode === 'dark' ? colors.gray : colors.mediumGray};
     line-height: normal;
     width: 100%;
     margin-top: ${theme.spacing(4)};

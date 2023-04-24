@@ -1,5 +1,5 @@
-import { Box, IconButton, SvgIcon, useMediaQuery, useTheme } from '@mui/material'
-import { useEffect, useState } from 'react'
+import { Box, Button, IconButton, SvgIcon, useMediaQuery, useTheme } from '@mui/material'
+import { useContext, useEffect, useState } from 'react'
 import {
   LeftContent,
   ListItemTypography,
@@ -15,6 +15,7 @@ import { pages } from './Navbar.utils'
 import { HamburguerIcon } from '../../../assets/icons'
 import NavbarDrawer from '../NavbarDrawer/NavbarDrawer'
 import { useGetSelectedSectionScroll } from '../../../utils/hooks/useGetSelectedSectionScroll'
+import { ColorModeContext } from '../../../utils/ColorModeContextProvider'
 
 export default function NavBar() {
   const [openDrawer, setOpenDrawer] = useState(false)
@@ -22,6 +23,8 @@ export default function NavBar() {
   const desktopMatches = useMediaQuery(theme.breakpoints.up('lg'))
   const [isNavBarFixed, setIsNavBarFixed] = useState(false)
   const [selectedSection] = useGetSelectedSectionScroll()
+
+  const { toggleColorMode } = useContext(ColorModeContext)
 
   const handleScroll = () => {
     const position = window.pageYOffset
@@ -63,6 +66,9 @@ export default function NavBar() {
           )}
         </LeftContent>
         <RightContent>
+          <Button sx={{ color: 'red' }} onClick={toggleColorMode}>
+            change theme
+          </Button>
           {!desktopMatches && !openDrawer && (
             <IconButton onClick={() => setOpenDrawer(true)}>
               <SvgIcon

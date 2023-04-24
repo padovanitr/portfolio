@@ -3,7 +3,7 @@ import { colors } from '../../../utils/colors'
 
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
-    background-color: ${theme.palette.primary.main};
+    background-color: ${theme.palette.background.default};
     height: fit-content;
     width: 100%;
     margin: 0;
@@ -37,7 +37,7 @@ export const FormWrapper = styled(Box)(
 
 export const StyledTitle = styled(Typography)(
   ({ theme }) => css`
-    color: ${colors.white};
+    color: ${theme.palette.primary.contrastText};
     font-size: 2.25rem;
     font-family: Poppins, sans-serif;
     font-weight: 700;
@@ -50,7 +50,7 @@ export const StyledTitle = styled(Typography)(
 
 export const StyledDescription = styled(Typography)(
   ({ theme }) => css`
-    color: ${colors.lightGray};
+    color: ${theme.palette.secondary.contrastText};
     font-size: 1.125rem;
     font-family: Poppins, sans-serif;
     font-weight: 300;
@@ -66,7 +66,7 @@ export const StyledDescription = styled(Typography)(
 export const StyledTextarea = styled(TextField)(
   ({ theme }) => css`
     &&& .MuiFormLabel-root {
-      color: ${colors.heatherGray};
+      color: ${theme.palette.mode === 'dark' ? colors.heatherGray : colors.darkGray};
       font-size: 1rem;
     }
 
@@ -80,8 +80,16 @@ export const StyledTextarea = styled(TextField)(
       font-weight: 400;
       line-height: 22px;
       padding: 0;
-      background-color: ${colors.mediumGray};
-      color: ${colors.borderColorGray};
+      background-color: ${theme.palette.mode === 'dark' ? colors.mediumGray : 'transparent'};
+      color: ${theme.palette.mode === 'dark' ? colors.borderColorGray : colors.darkGray};
+    }
+
+    & .MuiInputBase-root {
+      &.Mui-focused {
+        fieldset {
+          border-color: ${colors.red};
+        }
+      }
     }
   `
 )
@@ -89,16 +97,16 @@ export const StyledTextarea = styled(TextField)(
 export const StyledTextField = styled(TextField)(
   ({ theme }) => css`
     &&& .MuiFormLabel-root {
-      color: ${colors.heatherGray};
+      color: ${theme.palette.mode === 'dark' ? colors.heatherGray : colors.darkGray};
       font-size: 1rem;
     }
 
     & .MuiInputBase-root {
-      background-color: ${colors.mediumGray};
+      background-color: ${theme.palette.mode === 'dark' ? colors.mediumGray : 'transparent'};
       overflow: visible;
       border-radius: ${theme.shape.borderRadius}px;
       height: 58px;
-      color: ${colors.borderColorGray};
+      color: ${theme.palette.mode === 'dark' ? colors.borderColorGray : colors.darkGray};
       font-size: 1rem;
 
       ${theme.breakpoints.up('md')} {
@@ -112,6 +120,12 @@ export const StyledTextField = styled(TextField)(
 
       &.Mui-disabled {
         border-color: ${colors.heatherGray};
+      }
+
+      &.Mui-focused {
+        fieldset {
+          border-color: ${colors.red};
+        }
       }
     }
   `

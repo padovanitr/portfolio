@@ -1,9 +1,8 @@
 import { Box, Typography, css, styled } from '@mui/material'
-import { colors } from '../../../utils/colors'
 
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
-    background-color: ${colors.secondaryBlack};
+    background-color: ${theme.palette.background.default};
     height: 700px;
     width: 100%;
     margin: 0;
@@ -30,7 +29,7 @@ export const ContentContainer = styled(Box)(
 
 export const StyledTitle = styled(Typography)(
   ({ theme }) => css`
-    color: ${colors.white};
+    color: ${theme.palette.primary.contrastText};
     font-size: 2.25rem;
     font-family: Poppins, sans-serif;
     font-weight: 700;
@@ -43,7 +42,7 @@ export const StyledTitle = styled(Typography)(
 
 export const StyledDescription = styled(Typography)(
   ({ theme }) => css`
-    color: ${colors.lightGray};
+    color: ${theme.palette.secondary.contrastText};
     font-size: 1.125rem;
     font-family: Poppins, sans-serif;
     font-weight: 300;
