@@ -20,3 +20,7 @@ export const pages = [
     path: '#contact',
   },
 ]
+
+export const NavbarTexts = {
+  ThemeIconButtonTitle: (mode: string) => `Active ${mode === 'dark' ? 'light' : 'dark'} theme`,
+}

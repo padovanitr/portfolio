@@ -1,4 +1,14 @@
-import { AppBar, Box, Container, List, ListItem, Typography, css, styled } from '@mui/material'
+import {
+  AppBar,
+  Box,
+  Container,
+  IconButton,
+  List,
+  ListItem,
+  Typography,
+  css,
+  styled,
+} from '@mui/material'
 import { HashLink as Link } from 'react-router-hash-link'
 import { transientProps } from '../../../utils/transientProps'
 import { colors } from '../../../utils/colors'
@@ -112,5 +122,11 @@ export const ListItemTypography = styled(
 export const StyledLink = styled(Link)(
   ({ theme }) => css`
     text-decoration: none;
+  `
+)
+
+export const StyleIconButtonTheme = styled(IconButton)(
+  ({ theme }) => css`
+    cursor: pointer;
   `
 )

@@ -163,6 +163,11 @@ export const StyledImage = styled(`img`)(
     width: 650px;
     height: 450px;
     border-radius: 5px;
+    display: none;
+
+    ${theme.breakpoints.up('lg')} {
+      display: flex;
+    }
   `
 )
 

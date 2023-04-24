@@ -1,9 +1,10 @@
-import { Box, Button, IconButton, SvgIcon, useMediaQuery, useTheme } from '@mui/material'
+import { Box, IconButton, SvgIcon, useMediaQuery, useTheme } from '@mui/material'
 import { useContext, useEffect, useState } from 'react'
 import {
   LeftContent,
   ListItemTypography,
   RightContent,
+  StyleIconButtonTheme,
   StyledAppBar,
   StyledContainer,
   StyledLink,
@@ -11,8 +12,8 @@ import {
   StyledListItem,
   StyledNav,
 } from './Navbar.style'
-import { pages } from './Navbar.utils'
-import { HamburguerIcon } from '../../../assets/icons'
+import { NavbarTexts, pages } from './Navbar.utils'
+import { HamburguerIcon, MoonIcon, SunIcon } from '../../../assets/icons'
 import NavbarDrawer from '../NavbarDrawer/NavbarDrawer'
 import { useGetSelectedSectionScroll } from '../../../utils/hooks/useGetSelectedSectionScroll'
 import { ColorModeContext } from '../../../utils/ColorModeContextProvider'
@@ -24,7 +25,7 @@ export default function NavBar() {
   const [isNavBarFixed, setIsNavBarFixed] = useState(false)
   const [selectedSection] = useGetSelectedSectionScroll()
 
-  const { toggleColorMode } = useContext(ColorModeContext)
+  const { toggleColorMode, mode } = useContext(ColorModeContext)
 
   const handleScroll = () => {
     const position = window.pageYOffset
@@ -66,9 +67,12 @@ export default function NavBar() {
           )}
         </LeftContent>
         <RightContent>
-          <Button sx={{ color: 'red' }} onClick={toggleColorMode}>
-            change theme
-          </Button>
+          <StyleIconButtonTheme
+            onClick={toggleColorMode}
+            title={NavbarTexts.ThemeIconButtonTitle(mode)}
+          >
+            {mode === 'dark' ? <SvgIcon component={SunIcon} /> : <SvgIcon component={MoonIcon} />}
+          </StyleIconButtonTheme>
           {!desktopMatches && !openDrawer && (
             <IconButton onClick={() => setOpenDrawer(true)}>
               <SvgIcon
