@@ -12,9 +12,9 @@ import {
   StyledNav,
 } from './Navbar.style'
 import { pages } from './Navbar.utils'
-import { HamburguerIcon } from '../../assets/icons'
+import { HamburguerIcon } from '../../../assets/icons'
 import NavbarDrawer from '../NavbarDrawer/NavbarDrawer'
-import { useGetSelectedSectionScroll } from '../../utils/hooks/useGetSelectedSectionScroll'
+import { useGetSelectedSectionScroll } from '../../../utils/hooks/useGetSelectedSectionScroll'
 
 export default function NavBar() {
   const [openDrawer, setOpenDrawer] = useState(false)

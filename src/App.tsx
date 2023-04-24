@@ -1,6 +1,6 @@
 import { AppContainer } from './App.style'
-import Footer from './components/Footer/Footer'
-import NavBar from './components/Navbar/Navbar'
+import Footer from './ui/components/Footer/Footer'
+import NavBar from './ui/components/Navbar/Navbar'
 import About from './ui/pages/About/About'
 import Articles from './ui/pages/Articles/Articles'
 import Contact from './ui/pages/Contact/Contact'

@@ -7,7 +7,7 @@ import {
   StyledListItem,
   StyledPageText,
 } from './NavbarDrawer.style'
-import { CancelIcon } from '../../assets/icons'
+import { CancelIcon } from '../../../assets/icons'
 import { pages } from '../Navbar/Navbar.utils'
 
 export interface NavbarDrawerProps {

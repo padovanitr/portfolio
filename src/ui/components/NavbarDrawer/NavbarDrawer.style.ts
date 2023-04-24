@@ -1,8 +1,8 @@
 import { Box, ListItem, Typography } from '@mui/material'
 import { HashLink as Link } from 'react-router-hash-link'
 import { styled, css } from '@mui/material/styles'
-import { colors } from '../../utils/colors'
-import { transientProps } from '../../utils/transientProps'
+import { colors } from '../../../utils/colors'
+import { transientProps } from '../../../utils/transientProps'
 
 export const DrawerContainer = styled(Box)(
   ({ theme }) => css`

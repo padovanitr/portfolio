@@ -1,5 +1,5 @@
 import { Box, Grid, css, styled } from '@mui/material'
-import { colors } from '../../utils/colors'
+import { colors } from '../../../utils/colors'
 
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
@@ -14,8 +14,12 @@ export const StyledContainer = styled(Box)(
 export const FooterGridContainer = styled(Grid)(
   ({ theme }) => css`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: ${theme.spacing(2)};
+
+    ${theme.breakpoints.up('lg')} {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   `
 )
 

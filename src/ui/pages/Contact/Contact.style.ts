@@ -65,7 +65,7 @@ export const StyledDescription = styled(Typography)(
 
 export const StyledTextarea = styled(TextField)(
   ({ theme }) => css`
-    & .MuiFormLabel-root {
+    &&& .MuiFormLabel-root {
       color: ${colors.heatherGray};
       font-size: 1rem;
     }
@@ -88,7 +88,7 @@ export const StyledTextarea = styled(TextField)(
 
 export const StyledTextField = styled(TextField)(
   ({ theme }) => css`
-    & .MuiFormLabel-root {
+    &&& .MuiFormLabel-root {
       color: ${colors.heatherGray};
       font-size: 1rem;
     }

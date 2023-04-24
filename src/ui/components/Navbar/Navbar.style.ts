@@ -1,7 +1,7 @@
 import { AppBar, Box, Container, List, ListItem, Typography, css, styled } from '@mui/material'
 import { HashLink as Link } from 'react-router-hash-link'
-import { transientProps } from '../../utils/transientProps'
-import { colors } from '../../utils/colors'
+import { transientProps } from '../../../utils/transientProps'
+import { colors } from '../../../utils/colors'
 
 export const StyledAppBar = styled(
   AppBar,

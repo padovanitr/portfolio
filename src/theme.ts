@@ -21,6 +21,7 @@ const baseTheme = createTheme({
     },
   },
   palette: {
+    mode: 'light',
     primary: {
       main: colors.mainBlack,
     },
