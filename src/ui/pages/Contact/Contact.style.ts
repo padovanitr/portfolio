@@ -8,7 +8,7 @@ export const StyledContainer = styled(Box)(
     height: fit-content;
     width: 100%;
     margin: 0;
-    padding: ${theme.spacing(7)};
+    padding: ${theme.spacing(7, 3)};
     display: flex;
     align-items: baseline;
     justify-content: center;

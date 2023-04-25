@@ -22,7 +22,7 @@ export const StyledContainer = styled(Box)(
     height: auto;
     width: 100%;
     margin: 0;
-    padding: ${theme.spacing(16, 5)};
+    padding: ${theme.spacing(16, 3)};
     display: flex;
     align-items: center;
 

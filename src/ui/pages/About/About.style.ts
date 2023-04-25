@@ -7,7 +7,7 @@ export const StyledContainer = styled(Box)(
     height: auto;
     width: 100%;
     margin: 0;
-    padding: ${theme.spacing(7)};
+    padding: ${theme.spacing(7, 3)};
     display: flex;
     align-items: center;
 
@@ -46,7 +46,7 @@ export const ImageContainer = styled(Box)(
     }
 
     ${theme.breakpoints.up('lg')} {
-      height: 640px;
+      height: 570px;
       width: 483px;
     }
   `
@@ -73,5 +73,13 @@ export const StyledDescription = styled(Typography)(
     font-family: Poppins, sans-serif;
     font-weight: 300;
     line-height: 30px;
+  `
+)
+
+export const StyledImage = styled(`img`)(
+  ({ theme }) => css`
+    border-radius: 5px;
+    width: inherit;
+    height: inherit;
   `
 )
