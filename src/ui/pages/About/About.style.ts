@@ -34,13 +34,13 @@ export const ContentContainer = styled(Box)(
 export const ImageContainer = styled(Box)(
   ({ theme }) => css`
     background-color: ${colors.mediumGray};
-    height: 385px;
+    height: 420px;
     width: 100%;
     min-width: 290px;
     border-radius: ${theme.shape.borderRadius}px;
 
     ${theme.breakpoints.up('md')} {
-      height: 917px;
+      height: 567px;
       width: 483px;
       min-width: 483px;
     }
