@@ -1,9 +1,12 @@
-import { Box, IconButton, SvgIcon, useMediaQuery, useTheme } from '@mui/material'
+import { Box, IconButton, Link, SvgIcon, useMediaQuery, useTheme } from '@mui/material'
 import { useContext, useEffect, useState } from 'react'
 import {
+  HamburguerSvgIcon,
   LeftContent,
   ListItemTypography,
   RightContent,
+  SocialMediaContainer,
+  SocialMediaSvgIcon,
   StyleIconButtonTheme,
   StyledAppBar,
   StyledContainer,
@@ -13,7 +16,7 @@ import {
   StyledNav,
 } from './Navbar.style'
 import { NavbarTexts, pages } from './Navbar.utils'
-import { HamburguerIcon, MoonIcon, SunIcon } from '../../../assets/icons'
+import { GithubIcon, HamburguerIcon, LinkedinIcon, MoonIcon, SunIcon } from '../../../assets/icons'
 import NavbarDrawer from '../NavbarDrawer/NavbarDrawer'
 import { useGetSelectedSectionScroll } from '../../../utils/hooks/useGetSelectedSectionScroll'
 import { ColorModeContext } from '../../../utils/ColorModeContextProvider'
@@ -67,6 +70,14 @@ export default function NavBar() {
           )}
         </LeftContent>
         <RightContent>
+          <SocialMediaContainer>
+            <Link href="https://www.linkedin.com/in/thiago-padovani" target="_blank">
+              <SocialMediaSvgIcon inheritViewBox component={LinkedinIcon} />
+            </Link>
+            <Link href="https://github.com/padovanitr" target="_blank">
+              <SocialMediaSvgIcon inheritViewBox component={GithubIcon} />
+            </Link>
+          </SocialMediaContainer>
           <StyleIconButtonTheme
             onClick={toggleColorMode}
             title={NavbarTexts.ThemeIconButtonTitle(mode)}
@@ -75,14 +86,7 @@ export default function NavBar() {
           </StyleIconButtonTheme>
           {!desktopMatches && !openDrawer && (
             <IconButton onClick={() => setOpenDrawer(true)}>
-              <SvgIcon
-                inheritViewBox
-                component={HamburguerIcon}
-                sx={{
-                  width: '28px',
-                  height: '28px',
-                }}
-              />
+              <HamburguerSvgIcon inheritViewBox component={HamburguerIcon} />
             </IconButton>
           )}
         </RightContent>
