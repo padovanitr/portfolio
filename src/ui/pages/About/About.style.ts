@@ -1,4 +1,4 @@
-import { Box, Typography, css, styled } from '@mui/material'
+import { Box, Tab, Tabs, Typography, css, styled, tabClasses } from '@mui/material'
 import { colors } from '../../../utils/colors'
 
 export const StyledContainer = styled(Box)(
@@ -81,5 +81,24 @@ export const StyledImage = styled(`img`)(
     border-radius: 5px;
     width: inherit;
     height: inherit;
+    filter: ${theme.palette.mode === 'dark' ? 'grayscale(100%)' : 'none'};
+  `
+)
+
+export const StyledTab = styled(Tab)`
+  text-transform: capitalize;
+  font-size: 1rem;
+  align-items: center;
+
+  &.${tabClasses.selected} {
+    color: ${colors.red};
+  }
+`
+
+export const StyledTabs = styled(Tabs)(
+  ({ theme }) => css`
+    & .MuiTabs-flexContainer {
+      gap: ${theme.spacing(4)};
+    }
   `
 )
