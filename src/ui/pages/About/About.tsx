@@ -14,6 +14,7 @@ import { AboutTexts } from './About.utils'
 import AboutTabs from './AboutTabs/AboutTabs'
 import TabPanel from '../../components/TabPanel/TabPanel'
 import ExperienceInfo from './ExperienceInfo/ExperienceInfo'
+import EducationInfo from './EducationInfo/EducationInfo'
 
 export default function About() {
   const [tabActive, setTabActive] = useState('Skills')
@@ -36,15 +37,14 @@ export default function About() {
 
           <Box>
             <TabPanel isSelectedPanel={tabActive === 'Skills'}>
-              <TabItemTypography>
-                HTML, CSS, Styled-components, Material UI, Reactjs, JavaScript, TypeScript, Redux
-                Tool Kit, Jest, React Testing Library, Cypress and Django.
-              </TabItemTypography>
+              <TabItemTypography>{AboutTexts.Skills}</TabItemTypography>
             </TabPanel>
             <TabPanel isSelectedPanel={tabActive === 'Experience'}>
               <ExperienceInfo />
             </TabPanel>
-            <TabPanel isSelectedPanel={tabActive === 'Education'}>Education</TabPanel>
+            <TabPanel isSelectedPanel={tabActive === 'Education'}>
+              <EducationInfo />
+            </TabPanel>
           </Box>
         </Box>
       </ContentContainer>

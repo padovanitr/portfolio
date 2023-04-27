@@ -1,14 +1,14 @@
 import { Box } from '@mui/material'
-import { experienceInfo } from './ExperienceInfo.utils'
+import { educationInfo } from './EducationInfo.utils'
 import Info from '../Info'
 
-export default function ExperienceInfo() {
+export default function EducationInfo() {
   return (
     <Box display="flex" flexDirection="column" gap={2}>
-      {experienceInfo.map(({ id, position, company, location, startDate, endDate }) => (
+      {educationInfo.map(({ id, title, company, location, startDate, endDate }) => (
         <Info
           key={id}
-          title={position}
+          title={title}
           location={location}
           place={company}
           startDate={startDate}

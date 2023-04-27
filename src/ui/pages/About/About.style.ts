@@ -1,4 +1,4 @@
-import { Box, Tab, Tabs, Typography, css, styled, tabClasses } from '@mui/material'
+import { Box, Tab, Tabs, Theme, Typography, css, styled, tabClasses } from '@mui/material'
 import { colors } from '../../../utils/colors'
 
 export const StyledContainer = styled(Box)(
@@ -85,8 +85,9 @@ export const StyledImage = styled(`img`)(
 )
 
 export const StyledTab = styled(Tab)`
+  font-family: Poppins, sans-serif;
   text-transform: capitalize;
-  font-size: 1rem;
+  font-size: 1.125rem;
   align-items: center;
 
   &.${tabClasses.selected} {
@@ -109,5 +110,18 @@ export const TabItemTypography = styled(Typography)(
     font-family: Poppins, sans-serif;
     font-weight: 300;
     line-height: 30px;
+  `
+)
+
+export const TypographyMixin = (theme: Theme) => css`
+  color: ${theme.palette.secondary.contrastText};
+  font-size: 1rem;
+  font-family: Poppins, sans-serif;
+  line-height: 30px;
+`
+
+export const StyledTypography = styled(Typography)(
+  ({ theme }) => css`
+    ${TypographyMixin(theme)}
   `
 )
