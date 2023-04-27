@@ -1,0 +1,6 @@
+name: AWS Static Web Apps CI/CD
+
+on:
+  push:
+    branches:
+      - dev
