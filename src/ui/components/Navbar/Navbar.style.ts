@@ -181,5 +181,7 @@ export const LogoSvgIcon = styled(SvgIcon)(
     #logoInitials {
       fill: ${theme.palette.mode === 'dark' ? colors.darkGray : colors.linkWaterGray};
     }
+
+    align-self: center;
   `
 ) as StyledSvgIconType

@@ -63,7 +63,7 @@ export default function NavBar() {
           <LogoSvgIcon
             inheritViewBox
             component={LogoIcon}
-            sx={{ alignSelf: 'center', height: isNavBarFixed ? '50px' : '70px', width: '70px' }}
+            sx={{ height: isNavBarFixed ? '50px' : '70px', width: '70px' }}
           />
 
           {desktopMatches && (
