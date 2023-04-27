@@ -12,9 +12,9 @@ import {
 } from './About.style'
 import { AboutTexts } from './About.utils'
 import AboutTabs from './AboutTabs/AboutTabs'
-import TabPanel from '../../components/TabPanel/TabPanel'
 import ExperienceInfo from './ExperienceInfo/ExperienceInfo'
 import EducationInfo from './EducationInfo/EducationInfo'
+import TabPanel from '../../components/TabPanel/TabPanel'
 
 export default function About() {
   const [tabActive, setTabActive] = useState('Skills')
