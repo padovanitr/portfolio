@@ -1,4 +1,4 @@
-import { Box, IconButton, Link, SvgIcon, useMediaQuery, useTheme } from '@mui/material'
+import { IconButton, Link, SvgIcon, useMediaQuery, useTheme } from '@mui/material'
 import { useContext, useEffect, useState } from 'react'
 import {
   HamburguerSvgIcon,
