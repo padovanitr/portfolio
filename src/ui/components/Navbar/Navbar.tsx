@@ -4,6 +4,7 @@ import {
   HamburguerSvgIcon,
   LeftContent,
   ListItemTypography,
+  LogoSvgIcon,
   RightContent,
   SocialMediaContainer,
   SocialMediaSvgIcon,
@@ -16,7 +17,14 @@ import {
   StyledNav,
 } from './Navbar.style'
 import { NavbarTexts, pages } from './Navbar.utils'
-import { GithubIcon, HamburguerIcon, LinkedinIcon, MoonIcon, SunIcon } from '../../../assets/icons'
+import {
+  GithubIcon,
+  HamburguerIcon,
+  LinkedinIcon,
+  LogoIcon,
+  MoonIcon,
+  SunIcon,
+} from '../../../assets/icons'
 import NavbarDrawer from '../NavbarDrawer/NavbarDrawer'
 import { useGetSelectedSectionScroll } from '../../../utils/hooks/useGetSelectedSectionScroll'
 import { ColorModeContext } from '../../../utils/ColorModeContextProvider'
@@ -52,7 +60,12 @@ export default function NavBar() {
     <StyledAppBar $fixedposition={isNavBarFixed}>
       <StyledContainer maxWidth="xl" $fixedposition={isNavBarFixed}>
         <LeftContent>
-          <Box>logo</Box>
+          <LogoSvgIcon
+            inheritViewBox
+            component={LogoIcon}
+            sx={{ alignSelf: 'center', height: isNavBarFixed ? '50px' : '70px', width: '70px' }}
+          />
+
           {desktopMatches && (
             <StyledNav component="nav">
               <StyledList>

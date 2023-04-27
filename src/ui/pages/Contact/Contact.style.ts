@@ -83,7 +83,7 @@ export const StyledTextarea = styled(TextField)(
       font-weight: 400;
       line-height: 22px;
       padding: 0;
-      background-color: ${theme.palette.mode === 'dark' ? colors.mediumGray : 'transparent'};
+      background-color: ${theme.palette.mode === 'dark' ? colors.mediumGray : colors.linkWaterGray};
       color: ${theme.palette.mode === 'dark' ? colors.borderColorGray : colors.darkGray};
     }
 
@@ -105,7 +105,7 @@ export const StyledTextField = styled(TextField)(
     }
 
     & .MuiInputBase-root {
-      background-color: ${theme.palette.mode === 'dark' ? colors.mediumGray : 'transparent'};
+      background-color: ${theme.palette.mode === 'dark' ? colors.mediumGray : colors.linkWaterGray};
       overflow: visible;
       border-radius: ${theme.shape.borderRadius}px;
       height: 58px;

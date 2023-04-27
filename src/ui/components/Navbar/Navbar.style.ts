@@ -142,10 +142,14 @@ export const SocialMediaContainer = styled(Box)(
   ({ theme }) => css`
     display: flex;
     padding: ${theme.spacing(0, 2)};
-    margin: ${theme.spacing(0, 3)};
+    margin: ${theme.spacing(0, 1, 0, 3)};
     gap: ${theme.spacing(2)};
     justify-content: space-evenly;
     width: 150px;
+
+    ${theme.breakpoints.up('md')} {
+      margin: ${theme.spacing(0, 3)};
+    }
   `
 )
 
@@ -157,8 +161,25 @@ export const SocialMediaSvgIcon = styled(SvgIcon)(
 
 export const HamburguerSvgIcon = styled(SvgIcon)(
   ({ theme }) => css`
-    width: '28px';
-    height: '28px';
+    width: 28px;
+    height: 28px;
     stroke: ${theme.palette.mode === 'dark' ? colors.white : colors.darkGray};
+  `
+) as StyledSvgIconType
+
+export const LogoSvgIcon = styled(SvgIcon)(
+  ({ theme }) => css`
+    transition: ${theme.transitions.create(['height'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    })};
+    #logoBackground {
+      fill: ${theme.palette.mode === 'dark' ? colors.linkWaterGray : colors.darkGray};
+    }
+
+    #logoReactSymbol,
+    #logoInitials {
+      fill: ${theme.palette.mode === 'dark' ? colors.darkGray : colors.linkWaterGray};
+    }
   `
 ) as StyledSvgIconType

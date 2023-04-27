@@ -98,7 +98,11 @@ export const StyledTab = styled(Tab)`
 export const StyledTabs = styled(Tabs)(
   ({ theme }) => css`
     & .MuiTabs-flexContainer {
-      gap: ${theme.spacing(4)};
+      gap: 0;
+
+      ${theme.breakpoints.up('md')} {
+        gap: ${theme.spacing(4)};
+      }
     }
   `
 )
