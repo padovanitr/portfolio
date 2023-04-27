@@ -7,13 +7,12 @@ export const StyledContainer = styled(Box)(
     height: auto;
     width: 100%;
     margin: 0;
-    padding: ${theme.spacing(7, 3)};
+    padding: ${theme.spacing(10, 3)};
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     ${theme.breakpoints.up('lg')} {
-      height: 882px;
-      padding: ${theme.spacing(5, 15)};
+      padding: ${theme.spacing(12, 15)};
     }
   `
 )
@@ -100,5 +99,15 @@ export const StyledTabs = styled(Tabs)(
     & .MuiTabs-flexContainer {
       gap: ${theme.spacing(4)};
     }
+  `
+)
+
+export const TabItemTypography = styled(Typography)(
+  ({ theme }) => css`
+    color: ${theme.palette.secondary.contrastText};
+    font-size: 1rem;
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    line-height: 30px;
   `
 )

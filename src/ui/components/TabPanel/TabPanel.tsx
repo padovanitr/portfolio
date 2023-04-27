@@ -28,8 +28,7 @@ export default function TabPanel({
         display: 'flex',
         alignItems,
         justifyContent,
-        overflow: 'auto',
-        overflowX: 'hidden',
+        paddingTop: 3,
       }}
     >
       {children}
