@@ -1,11 +1,14 @@
+import { SvgIcon } from '@mui/material'
 import {
   FooterGridContainer,
   FooterItem,
   LogoSubtitle,
   LogoSvgIcon,
   StyledContainer,
+  StyledCopyright,
+  StyledMediaLink,
 } from './Footer.style'
-import { LogoIcon } from '../../../assets/icons'
+import { GithubIcon, LinkedinIcon, LogoIcon } from '../../../assets/icons'
 
 export default function Footer() {
   return (
@@ -15,8 +18,19 @@ export default function Footer() {
           <LogoSvgIcon inheritViewBox component={LogoIcon} />
           <LogoSubtitle>Thiago Padovani</LogoSubtitle>
         </FooterItem>
-        <FooterItem item>social media</FooterItem>
-        <FooterItem item>copy rights</FooterItem>
+        <FooterItem item>
+          <StyledMediaLink href="https://www.linkedin.com/in/thiago-padovani" target="_blank">
+            <SvgIcon inheritViewBox component={LinkedinIcon} />
+          </StyledMediaLink>
+          <StyledMediaLink href="https://github.com/padovanitr" target="_blank">
+            <SvgIcon inheritViewBox component={GithubIcon} />
+          </StyledMediaLink>
+        </FooterItem>
+        <FooterItem item>
+          <StyledCopyright>
+            Made with <span style={{ color: '#e25555' }}>&#9829;</span> by Thiago Padovani
+          </StyledCopyright>
+        </FooterItem>
       </FooterGridContainer>
     </StyledContainer>
   )

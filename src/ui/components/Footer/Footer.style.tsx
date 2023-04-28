@@ -1,4 +1,4 @@
-import { Box, Grid, SvgIcon, Typography, css, styled } from '@mui/material'
+import { Box, Grid, Link, SvgIcon, Typography, css, styled } from '@mui/material'
 import { colors } from '../../../utils/colors'
 import { StyledSvgIconType } from '../../../utils/types'
 
@@ -30,7 +30,7 @@ export const FooterItem = styled(Grid)(
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: ${theme.spacing(1)};
+    gap: ${theme.spacing(2)};
   `
 )
 
@@ -53,6 +53,35 @@ export const LogoSubtitle = styled(Typography)(
   ({ theme }) => css`
     color: ${colors.white};
     font-size: 1.5rem;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+  `
+)
+
+export const StyledMediaLink = styled(Link)(
+  ({ theme }) => css`
+    cursor: pointer;
+    border: 2px solid ${colors.lightGray};
+    color: ${colors.lightGray};
+    padding: ${theme.spacing(2)};
+    border-radius: 100%;
+    transition: ${theme.transitions.create('all', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    })};
+
+    &:hover {
+      background: ${colors.red};
+      border: 2px solid ${colors.red};
+      color: ${colors.white};
+    }
+  `
+)
+
+export const StyledCopyright = styled(Typography)(
+  ({ theme }) => css`
+    color: ${colors.white};
+    font-size: 1rem;
     font-family: Poppins, sans-serif;
     font-weight: 500;
   `

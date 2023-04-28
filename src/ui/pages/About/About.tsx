@@ -15,6 +15,7 @@ import AboutTabs from './AboutTabs/AboutTabs'
 import ExperienceInfo from './ExperienceInfo/ExperienceInfo'
 import EducationInfo from './EducationInfo/EducationInfo'
 import TabPanel from '../../components/TabPanel/TabPanel'
+import SkillsInfo from './SkillsInfo/SkillsInfo'
 
 export default function About() {
   const [tabActive, setTabActive] = useState('Skills')
@@ -37,7 +38,9 @@ export default function About() {
 
           <Box>
             <TabPanel isSelectedPanel={tabActive === 'Skills'}>
-              <TabItemTypography>{AboutTexts.Skills}</TabItemTypography>
+              <TabItemTypography>
+                <SkillsInfo />
+              </TabItemTypography>
             </TabPanel>
             <TabPanel isSelectedPanel={tabActive === 'Experience'}>
               <ExperienceInfo />
