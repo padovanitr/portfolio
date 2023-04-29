@@ -1,5 +1,7 @@
 import {
+  ButtonContainer,
   DescriptionContainer,
+  StyledButton,
   StyledImage,
   StyledPaperContainer,
   StyledPreview,
@@ -20,6 +22,9 @@ export default function Card({ image, title, preview }: CardProps) {
         <StyledTitle>{title}</StyledTitle>
         <StyledPreview>{preview}</StyledPreview>
       </DescriptionContainer>
+      <ButtonContainer>
+        <StyledButton>Read more</StyledButton>
+      </ButtonContainer>
     </StyledPaperContainer>
   )
 }

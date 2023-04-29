@@ -80,10 +80,11 @@ export const StyledGridContainer = styled(Grid)(
     display: grid;
     grid-template-columns: 1fr
     margin: 0 auto;
-    gap: ${theme.spacing(3)};
+    gap: ${theme.spacing(6)};
     margin-top: ${theme.spacing(2)};
 
     ${theme.breakpoints.up('md')} {
+      gap: ${theme.spacing(3)};
       grid-template-columns: repeat(2, 1fr);
     }
 

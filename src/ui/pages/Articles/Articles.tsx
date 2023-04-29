@@ -17,7 +17,7 @@ export default function Articles() {
         <StyledDescription>{ArticlesTexts.Description}</StyledDescription>
         <StyledGridContainer>
           {articlesInfo.map(({ title, id, image, url, preview }) => (
-            <Link key={id} href={url} target="_blank">
+            <Link sx={{ textDecoration: 'none' }} key={id} href={url} target="_blank">
               <Card title={title} image={image} preview={preview} />
             </Link>
           ))}
