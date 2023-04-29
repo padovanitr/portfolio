@@ -1,10 +1,10 @@
-import { Box, Typography, css, styled } from '@mui/material'
+import { Box, Grid, Typography, css, styled } from '@mui/material'
 import { colors } from '../../../utils/colors'
 
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
     background-color: ${theme.palette.background.paper};
-    height: 700px;
+    height: auto;
     width: 100%;
     margin: 0;
     padding: ${theme.spacing(7, 3)};
@@ -12,8 +12,11 @@ export const StyledContainer = styled(Box)(
     align-items: flex-start;
 
     ${theme.breakpoints.up('lg')} {
-      height: 882px;
-      padding: ${theme.spacing(5, 15)};
+      padding: ${theme.spacing(5, 8, 8)};
+    }
+
+    ${theme.breakpoints.up('xl')} {
+      padding: ${theme.spacing(9, 15, 10)};
     }
   `
 )
@@ -69,5 +72,23 @@ export const StyledDescription = styled(Typography)(
     font-family: Poppins, sans-serif;
     font-weight: 300;
     line-height: 30px;
+  `
+)
+
+export const StyledGridContainer = styled(Grid)(
+  ({ theme }) => css`
+    display: grid;
+    grid-template-columns: 1fr
+    margin: 0 auto;
+    gap: ${theme.spacing(3)};
+    margin-top: ${theme.spacing(2)};
+
+    ${theme.breakpoints.up('md')} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    ${theme.breakpoints.up('lg')} {
+      grid-template-columns: repeat(3, 1fr);
+    }
   `
 )
