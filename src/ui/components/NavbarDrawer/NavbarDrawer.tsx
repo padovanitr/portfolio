@@ -1,6 +1,7 @@
-import { Drawer, IconButton, List, SvgIcon } from '@mui/material'
+import { Drawer, IconButton, List } from '@mui/material'
 import { useLocation } from 'react-router-dom'
 import {
+  CloseDrawerSvgIcon,
   DrawerContainer,
   DrawerHeader,
   StyledLink,
@@ -17,7 +18,7 @@ export interface NavbarDrawerProps {
 
 export default function NavbarDrawer({ open, onClose }: NavbarDrawerProps) {
   const location = useLocation()
-  const selectedPage = location.hash
+  const selectedPage = location.hash === '' ? '#home' : location.hash
 
   const handleClickItem = (pagePath: string) => {
     onClose()
@@ -28,14 +29,7 @@ export default function NavbarDrawer({ open, onClose }: NavbarDrawerProps) {
       <DrawerContainer>
         <DrawerHeader>
           <IconButton onClick={onClose}>
-            <SvgIcon
-              inheritViewBox
-              component={CancelIcon}
-              sx={{
-                width: '30px',
-                height: '30px',
-              }}
-            />
+            <CloseDrawerSvgIcon inheritViewBox component={CancelIcon} />
           </IconButton>
         </DrawerHeader>
         <List>

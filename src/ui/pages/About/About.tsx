@@ -8,7 +8,6 @@ import {
   StyledDescription,
   StyledImage,
   StyledTitle,
-  TabItemTypography,
 } from './About.style'
 import { AboutTexts } from './About.utils'
 import AboutTabs from './AboutTabs/AboutTabs'
@@ -38,9 +37,7 @@ export default function About() {
 
           <Box>
             <TabPanel isSelectedPanel={tabActive === 'Skills'}>
-              <TabItemTypography>
-                <SkillsInfo />
-              </TabItemTypography>
+              <SkillsInfo />
             </TabPanel>
             <TabPanel isSelectedPanel={tabActive === 'Experience'}>
               <ExperienceInfo />

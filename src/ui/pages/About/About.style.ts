@@ -107,16 +107,6 @@ export const StyledTabs = styled(Tabs)(
   `
 )
 
-export const TabItemTypography = styled(Typography)(
-  ({ theme }) => css`
-    color: ${theme.palette.secondary.contrastText};
-    font-size: 1rem;
-    font-family: Poppins, sans-serif;
-    font-weight: 300;
-    line-height: 30px;
-  `
-)
-
 export const TypographyMixin = (theme: Theme) => css`
   color: ${theme.palette.secondary.contrastText};
   font-size: 1rem;
