@@ -61,10 +61,10 @@ export const StyledButton = styled(Button)(
     align-self: center;
     text-transform: none;
     box-shadow: none;
-    color: ${colors.white};
+    color: ${theme.palette.mode === 'dark' ? colors.white : colors.darkGray};
     border: 1px solid ${colors.red};
     font-size: 1rem;
-    width: 100%;
+    width: 160px;
     align-self: center;
     background-color: transparent;
     transition: ${theme.transitions.create('transform', {
@@ -77,10 +77,6 @@ export const StyledButton = styled(Button)(
       border: 1px solid ${colors.red};
       color: ${theme.palette.primary.contrastText};
       transform: translateY(-0.3rem);
-    }
-
-    ${theme.breakpoints.up('md')} {
-      width: 160px;
     }
   `
 )

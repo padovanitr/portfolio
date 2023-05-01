@@ -12,7 +12,6 @@ export default function AboutTabs({ handleChange, tabActive, sx }: AboutTabsProp
     <Box sx={{ height: '48px', ...sx }}>
       <StyledTabs indicatorColor="secondary" onChange={handleChange} value={tabActive}>
         <StyledTab id="skills" label="Skills" value="Skills" />
-        <StyledTab id="experience" label="Experience" value="Experience" />
         <StyledTab id="education" label="Education" value="Education" />
       </StyledTabs>
     </Box>

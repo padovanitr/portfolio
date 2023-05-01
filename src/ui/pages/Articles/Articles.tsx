@@ -1,4 +1,4 @@
-import { Link } from '@mui/material'
+import { Box, Link } from '@mui/material'
 import Card from '../../components/Card/Card'
 import {
   ContentContainer,
@@ -13,8 +13,10 @@ export default function Articles() {
   return (
     <StyledContainer id="articles">
       <ContentContainer>
-        <StyledTitle variant="h2">{ArticlesTexts.Title}</StyledTitle>
-        <StyledDescription>{ArticlesTexts.Description}</StyledDescription>
+        <Box>
+          <StyledTitle variant="h2">{ArticlesTexts.Title}</StyledTitle>
+          <StyledDescription>{ArticlesTexts.Description}</StyledDescription>
+        </Box>
         <StyledGridContainer>
           {articlesInfo.map(({ title, id, image, url, preview }) => (
             <Link sx={{ textDecoration: 'none' }} key={id} href={url} target="_blank">

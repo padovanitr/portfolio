@@ -57,6 +57,7 @@ export const StyledTitle = styled(Typography)(
     font-size: 2.25rem;
     font-family: Poppins, sans-serif;
     font-weight: 700;
+    text-align: center;
     margin-bottom: ${theme.spacing(2)};
 
     ${theme.breakpoints.up('md')} {

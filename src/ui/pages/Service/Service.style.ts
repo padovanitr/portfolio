@@ -1,4 +1,5 @@
-import { Box, Typography, css, styled } from '@mui/material'
+import { Box, Tab, Tabs, Typography, css, styled, tabClasses } from '@mui/material'
+import { colors } from '../../../utils/colors'
 
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
@@ -50,3 +51,37 @@ export const StyledDescription = styled(Typography)(
     text-align: center;
   `
 )
+
+export const StyledTabs = styled(Tabs)(
+  ({ theme }) => css`
+    &&& .MuiTabs-scroller {
+      width: 350px;
+      overflow: auto !important;
+
+      ${theme.breakpoints.up('lg')} {
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+
+    & .MuiTabs-flexContainer {
+      gap: 0;
+
+      ${theme.breakpoints.up('md')} {
+        gap: ${theme.spacing(4)};
+      }
+    }
+  `
+)
+
+export const StyledTab = styled(Tab)`
+  font-family: Poppins, sans-serif;
+  text-transform: capitalize;
+  font-size: 1.125rem;
+  align-items: center;
+  color: ${colors.lightGray};
+
+  &.${tabClasses.selected} {
+    color: ${colors.red};
+  }
+`

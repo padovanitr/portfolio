@@ -1,6 +1,6 @@
 export enum ContactTexts {
   Title = 'Contact',
-  Description = 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum',
+  Description = 'Feel free to contact me by submitting the form below. Whether you have a question, talk about new opportunities or just want to say hi, I’ll try my best to get back to you!',
   NameFieldLabel = 'Full name',
   EmailFieldLabel = 'Email',
   SubjectFieldLabel = 'Subject',

@@ -58,7 +58,7 @@ export const StyledDescription = styled(Typography)(
     font-family: Poppins, sans-serif;
     font-weight: 300;
     line-height: 30px;
-    text-align: left;
+    text-align: center;
 
     ${theme.breakpoints.up('lg')} {
       text-align: center;
