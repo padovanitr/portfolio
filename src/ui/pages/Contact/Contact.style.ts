@@ -31,10 +31,10 @@ export const ContentContainer = styled(Box)(
 
 export const FormWrapper = styled(Box)(
   ({ theme }) => css`
-    width: 100%;
+    width: 100% !important;
     margin-top: ${theme.spacing(3)};
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   `
 )
 
@@ -167,12 +167,21 @@ export const StyledImage = styled(`img`)(
 
     ${theme.breakpoints.up('lg')} {
       display: flex;
+      width: 500px;
+      height: 300px;
     }
   `
 )
 
 export const StyledForm = styled(Form)(
-  () => css`
+  ({ theme }) => css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+
+    ${theme.breakpoints.up('md')} {
+      width: 450px;
+    }
   `
 )

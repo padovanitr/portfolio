@@ -4,7 +4,8 @@ import { colors } from '../../../utils/colors'
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
     background-color: ${theme.palette.background.default};
-    height: 700px;
+    height: auto;
+    min-height: 700px;
     width: 100%;
     margin: 0;
     padding: ${theme.spacing(7, 3)};
@@ -13,8 +14,8 @@ export const StyledContainer = styled(Box)(
     justify-content: center;
 
     ${theme.breakpoints.up('lg')} {
-      height: 882px;
-      padding: ${theme.spacing(13, 15)};
+      height: auto;
+      padding: ${theme.spacing(9, 15)};
     }
   `
 )
@@ -41,26 +42,17 @@ export const StyledTitle = styled(Typography)(
   `
 )
 
-export const StyledDescription = styled(Typography)(
-  ({ theme }) => css`
-    color: ${theme.palette.secondary.contrastText};
-    font-size: 1.125rem;
-    font-family: Poppins, sans-serif;
-    font-weight: 300;
-    line-height: 30px;
-    text-align: center;
-  `
-)
-
 export const StyledTabs = styled(Tabs)(
   ({ theme }) => css`
+    min-width: 130px;
     &&& .MuiTabs-scroller {
-      width: 350px;
       overflow: auto !important;
+      width: 350px;
 
-      ${theme.breakpoints.up('lg')} {
+      ${theme.breakpoints.up('md')} {
         width: 100%;
         overflow: hidden;
+        width: auto;
       }
     }
 
@@ -80,7 +72,7 @@ export const StyledTab = styled(Tab)`
   text-transform: capitalize;
   font-size: 1.125rem;
   align-items: center;
-  color: ${colors.lightGray};
+  color: ${colors.textGrayLight};
 
   &.${tabClasses.selected} {
     color: ${colors.red};

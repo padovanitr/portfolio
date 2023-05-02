@@ -75,7 +75,7 @@ export const StyledButton = styled(Button)(
     &:hover {
       background-color: ${colors.red};
       border: 1px solid ${colors.red};
-      color: ${theme.palette.primary.contrastText};
+      color: ${theme.palette.mode === 'dark' ? theme.palette.primary.contrastText : colors.white};
       transform: translateY(-0.3rem);
     }
   `

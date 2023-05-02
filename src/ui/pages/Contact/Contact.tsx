@@ -1,6 +1,5 @@
 import { FormikProvider, useFormik } from 'formik'
 import { Grid } from '@mui/material'
-import ContactBg from '../../../assets/img/contactBg.webp'
 import {
   ContentContainer,
   FormWrapper,
@@ -8,7 +7,6 @@ import {
   StyledContainer,
   StyledDescription,
   StyledForm,
-  StyledImage,
   StyledTextField,
   StyledTextarea,
   StyledTitle,
@@ -58,7 +56,6 @@ export default function Contact() {
             </Grid>
           </StyledForm>
         </FormikProvider>
-        <StyledImage src={ContactBg} />
       </FormWrapper>
     </StyledContainer>
   )

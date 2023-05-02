@@ -65,7 +65,7 @@ export const StyledMediaLink = styled(Link)(
     color: ${colors.lightGray};
     padding: ${theme.spacing(2)};
     border-radius: 100%;
-    transition: ${theme.transitions.create('all', {
+    transition: ${theme.transitions.create(['all', 'transform'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     })};
@@ -74,6 +74,7 @@ export const StyledMediaLink = styled(Link)(
       background: ${colors.red};
       border: 2px solid ${colors.red};
       color: ${colors.white};
+      transform: translateY(-0.3rem);
     }
   `
 )

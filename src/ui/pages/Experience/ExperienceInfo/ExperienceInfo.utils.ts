@@ -7,7 +7,10 @@ export const experienceInfo = [
     startDate: 'nov 2022',
     endDate: 'current',
     description: [
-      'In this role I’m responsible for architecting and designing technical solutions for complex problems on the project: Currently I’m working on a banking web application for an American Credit Union. Tech used: HTML, CSS, Styled-components, Material UI, Reactjs, JavaScript, TypeScript, Redux Tool Kit, Jest, React Testing Library and Cypress.',
+      'In this role I’m responsible for architecting and designing technical solutions for complex problems on the project.',
+      'Tech used: HTML, CSS, Styled-components, Material UI, Reactjs, JavaScript, TypeScript, Redux Tool Kit, Jest, React Testing Library and Cypress.',
+      'Currently I’m working on a banking web application for an American Credit Union.',
+      'I also review PRs of my teammates and present demos to the clients',
     ],
   },
   {
@@ -18,7 +21,8 @@ export const experienceInfo = [
     startDate: 'may 2022',
     endDate: 'nov 2022',
     description: [
-      'I performed to develop web applications for customers using technologies such as HTML, CSS, Styled Components, Material UI, Reactjs, JavaScript and TypeScript. Also having the opportunity to learn more about Redux Tool Kit, Jest, React Testing Library and Cypress',
+      'I performed to develop web applications for customers using technologies such as HTML, CSS, Styled Components, Material UI, Reactjs, JavaScript and TypeScript.',
+      'Had the opportunity to learn more about Redux Tool Kit, Jest, React Testing Library and Cypress',
     ],
   },
   {

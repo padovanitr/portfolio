@@ -41,12 +41,12 @@ export const ImageContainer = styled(Box)(
     ${theme.breakpoints.up('md')} {
       height: 567px;
       width: 483px;
-      min-width: 483px;
+      min-width: 383px;
     }
 
     ${theme.breakpoints.up('lg')} {
-      height: 570px;
-      width: 483px;
+      height: 450px;
+      width: 383px;
     }
   `
 )

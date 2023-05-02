@@ -1,9 +1,14 @@
-import { Box, useMediaQuery, useTheme } from '@mui/material'
+import { Box, List, useMediaQuery, useTheme } from '@mui/material'
 import { useState } from 'react'
 import { experienceInfo } from './ExperienceInfo.utils'
 import { StyledTab, StyledTabs } from '../Experience.style'
-import TabPanel from '../../../components/TabPanel/TabPanel'
-import { ExperienceContainer } from './ExperienceInfo.style'
+import {
+  ExperienceContainer,
+  PositionTitle,
+  StyledDescription,
+  StyledListItem,
+  StyledTabPanel,
+} from './ExperienceInfo.style'
 
 export default function ExperienceInfo() {
   const theme = useTheme()
@@ -28,11 +33,29 @@ export default function ExperienceInfo() {
       </StyledTabs>
 
       <Box>
-        {experienceInfo.map(({ id, position, company, location, startDate, endDate }) => (
-          <TabPanel key={company} isSelectedPanel={tabActive === company}>
-            {company} description
-          </TabPanel>
-        ))}
+        {experienceInfo.map(
+          ({ id, position, company, location, startDate, endDate, description }) => (
+            <StyledTabPanel key={id} isSelectedPanel={tabActive === company}>
+              <Box>
+                <PositionTitle>
+                  {position} - {company}, {location}
+                </PositionTitle>
+                <StyledDescription>
+                  {startDate} - {endDate}
+                </StyledDescription>
+              </Box>
+              <Box>
+                <List>
+                  {description.map((desc) => (
+                    <StyledListItem key={desc}>
+                      <StyledDescription>{desc}</StyledDescription>
+                    </StyledListItem>
+                  ))}
+                </List>
+              </Box>
+            </StyledTabPanel>
+          )
+        )}
       </Box>
     </ExperienceContainer>
   )
