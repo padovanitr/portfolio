@@ -12,6 +12,7 @@ export const experienceInfo = [
       'Currently I’m working on a banking web application for an American Credit Union.',
       'I also review PRs of my teammates and present demos to the clients',
     ],
+    website: 'https://loka.com/',
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ export const experienceInfo = [
       'I performed to develop web applications for customers using technologies such as HTML, CSS, Styled Components, Material UI, Reactjs, JavaScript and TypeScript.',
       'Had the opportunity to learn more about Redux Tool Kit, Jest, React Testing Library and Cypress',
     ],
+    website: 'https://www.bridge351.com/',
   },
   {
     id: 3,
@@ -37,6 +39,7 @@ export const experienceInfo = [
       'Developed new features in Supernossoemcasa website.',
       'Participated of the whole redesign of Apoioentrega website improving the performance and UX.',
     ],
+    website: 'https://www.supernosso.com/',
   },
   {
     id: 4,
@@ -50,5 +53,6 @@ export const experienceInfo = [
       'Implemented and participated in the development of client’s dashboard and the result report generator.',
       'Using of Git as code version control system and Trello for project tasks management.',
     ],
+    website: 'https://www.obrazul.com.br/',
   },
 ]

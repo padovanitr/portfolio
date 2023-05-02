@@ -65,3 +65,21 @@ export const PositionTitle = styled(Typography)(
     font-weight: 700;
   `
 )
+
+export const PositionCompany = styled(Typography)(
+  ({ theme }) => css`
+    color: ${theme.palette.mode === 'dark' ? colors.white : colors.darkGray};
+    font-size: 1.125rem;
+    font-family: Poppins, sans-serif;
+    line-height: 30px;
+    font-weight: 700;
+    transition: ${theme.transitions.create('transform', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    })};
+
+    &:hover {
+      transform: translateY(-0.3rem);
+    }
+  `
+)

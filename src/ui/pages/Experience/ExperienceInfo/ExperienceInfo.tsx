@@ -1,9 +1,10 @@
-import { Box, List, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Link, List, useMediaQuery, useTheme } from '@mui/material'
 import { useState } from 'react'
 import { experienceInfo } from './ExperienceInfo.utils'
 import { StyledTab, StyledTabs } from '../Experience.style'
 import {
   ExperienceContainer,
+  PositionCompany,
   PositionTitle,
   StyledDescription,
   StyledListItem,
@@ -34,12 +35,16 @@ export default function ExperienceInfo() {
 
       <Box>
         {experienceInfo.map(
-          ({ id, position, company, location, startDate, endDate, description }) => (
+          ({ id, position, company, location, startDate, endDate, description, website }) => (
             <StyledTabPanel key={id} isSelectedPanel={tabActive === company}>
               <Box>
-                <PositionTitle>
-                  {position} - {company}, {location}
-                </PositionTitle>
+                <Box display="flex">
+                  <PositionTitle>{position} -</PositionTitle>
+                  <Link href={website} target="_blank">
+                    <PositionCompany>@ {company}</PositionCompany>
+                  </Link>
+                  <PositionTitle>, {location}</PositionTitle>
+                </Box>
                 <StyledDescription>
                   {startDate} - {endDate}
                 </StyledDescription>
