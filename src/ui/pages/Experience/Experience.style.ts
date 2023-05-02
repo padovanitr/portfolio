@@ -69,6 +69,7 @@ export const StyledTabs = styled(Tabs)(
 
       ${theme.breakpoints.up('md')} {
         gap: ${theme.spacing(4)};
+        border-right: 1px solid ${colors.linkWaterGray};
       }
     }
   `

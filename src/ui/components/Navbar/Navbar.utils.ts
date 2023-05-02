@@ -8,8 +8,8 @@ export const pages = [
     path: '#about',
   },
   {
-    title: 'Service',
-    path: '#service',
+    title: 'Experience',
+    path: '#experience',
   },
   {
     title: 'Articles',

@@ -1,7 +1,7 @@
 import { Box, useMediaQuery, useTheme } from '@mui/material'
 import { useState } from 'react'
 import { experienceInfo } from './ExperienceInfo.utils'
-import { StyledTab, StyledTabs } from '../../Service/Service.style'
+import { StyledTab, StyledTabs } from '../Experience.style'
 import TabPanel from '../../../components/TabPanel/TabPanel'
 import { ExperienceContainer } from './ExperienceInfo.style'
 

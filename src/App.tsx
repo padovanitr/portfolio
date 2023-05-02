@@ -5,7 +5,7 @@ import About from './ui/pages/About/About'
 import Articles from './ui/pages/Articles/Articles'
 import Contact from './ui/pages/Contact/Contact'
 import Home from './ui/pages/Home/Home'
-import Service from './ui/pages/Service/Service'
+import Experience from './ui/pages/Experience/Experience'
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <NavBar />
       <Home />
       <About />
-      <Service />
+      <Experience />
       <Articles />
       <Contact />
       <Footer />
