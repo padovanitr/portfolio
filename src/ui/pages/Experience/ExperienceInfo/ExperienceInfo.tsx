@@ -38,12 +38,12 @@ export default function ExperienceInfo() {
           ({ id, position, company, location, startDate, endDate, description, website }) => (
             <StyledTabPanel key={id} isSelectedPanel={tabActive === company}>
               <Box>
-                <Box display="flex">
+                <Box display="flex" sx={{ flexWrap: 'wrap' }}>
                   <PositionTitle>{position} -</PositionTitle>
                   <Link href={website} target="_blank">
-                    <PositionCompany>@ {company}</PositionCompany>
+                    <PositionCompany>@{company}, </PositionCompany>
                   </Link>
-                  <PositionTitle>, {location}</PositionTitle>
+                  <PositionTitle>&nbsp;{location}</PositionTitle>
                 </Box>
                 <StyledDescription>
                   {startDate} - {endDate}

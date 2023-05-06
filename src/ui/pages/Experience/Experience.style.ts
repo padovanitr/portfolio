@@ -47,7 +47,8 @@ export const StyledTabs = styled(Tabs)(
     min-width: 130px;
     &&& .MuiTabs-scroller {
       overflow: auto !important;
-      width: 350px;
+      width: 370px;
+      position: absolute;
 
       ${theme.breakpoints.up('md')} {
         width: 100%;
@@ -63,6 +64,10 @@ export const StyledTabs = styled(Tabs)(
         gap: ${theme.spacing(4)};
         border-right: 1px solid ${colors.linkWaterGray};
       }
+    }
+
+    .MuiButtonBase-root {
+      border-bottom: 2px solid ${colors.textGrayLight};
     }
   `
 )
