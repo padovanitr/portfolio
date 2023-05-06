@@ -1,4 +1,13 @@
-import { Box, Button, TextField, Typography, css, inputBaseClasses, styled } from '@mui/material'
+import {
+  Box,
+  Button,
+  TextField,
+  Typography,
+  css,
+  inputBaseClasses,
+  styled,
+  Link,
+} from '@mui/material'
 import { Form } from 'formik'
 import { colors } from '../../../utils/colors'
 
@@ -59,9 +68,14 @@ export const StyledDescription = styled(Typography)(
     font-weight: 300;
     line-height: 30px;
     text-align: center;
+    padding: ${theme.spacing(1, 40)};
+
+    ${theme.breakpoints.up('md')} {
+      padding: ${theme.spacing(1, 15)};
+    }
 
     ${theme.breakpoints.up('lg')} {
-      text-align: center;
+      padding: ${theme.spacing(1, 20)};
     }
   `
 )
@@ -182,6 +196,42 @@ export const StyledForm = styled(Form)(
 
     ${theme.breakpoints.up('md')} {
       width: 450px;
+    }
+  `
+)
+
+export const StyledLinkButton = styled(Link)(
+  ({ theme }) => css`
+    &&&.MuiLink-root {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: ${theme.spacing(3, 3.5)};
+      align-self: center;
+      text-transform: none;
+      box-shadow: none;
+      color: ${theme.palette.mode === 'dark' ? colors.white : colors.darkGray};
+      border: 1px solid ${colors.red};
+      font-size: 1rem;
+      width: 160px;
+      align-self: center;
+      background-color: transparent;
+      border-radius: ${theme.shape.borderRadius}px;
+      font-weight: 600;
+      margin: ${theme.spacing(10, 0)};
+      text-decoration: none;
+      transition: ${theme.transitions.create('transform', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+      })};
+
+      &:hover {
+        background-color: ${colors.red};
+        border: 1px solid ${colors.red};
+        color: ${theme.palette.mode === 'dark' ? theme.palette.primary.contrastText : colors.white};
+        transform: translateY(-0.3rem);
+      }
     }
   `
 )
