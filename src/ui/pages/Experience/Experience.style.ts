@@ -8,7 +8,7 @@ export const StyledContainer = styled(Box)(
     min-height: 700px;
     width: 100%;
     margin: 0;
-    padding: ${theme.spacing(7, 3)};
+    padding: ${theme.spacing(7, 0, 7, 3)};
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -47,8 +47,7 @@ export const StyledTabs = styled(Tabs)(
     min-width: 130px;
     &&& .MuiTabs-scroller {
       overflow: auto !important;
-      width: 370px;
-      position: absolute;
+      width: 350px;
 
       ${theme.breakpoints.up('md')} {
         width: 100%;

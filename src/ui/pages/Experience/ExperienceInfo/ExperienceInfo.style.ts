@@ -8,7 +8,7 @@ export const ExperienceContainer = styled(Box)(
     gap: ${theme.spacing(4)};
     flex-direction: column;
     width: 100%;
-    padding: ${theme.spacing(0, 2)};
+    padding: ${theme.spacing(0, 0, 0, 2)};
 
     ${theme.breakpoints.up('md')} {
       flex-direction: row;
@@ -22,11 +22,12 @@ export const StyledTabPanel = styled(TabPanel)(
   ({ theme }) => css`
     display: flex;
     flex-direction: column;
-    padding-top: 0;
+    padding: ${theme.spacing(0, 2, 0, 0)};
 
     ${theme.breakpoints.up('md')} {
       max-width: 700px;
       align-items: flex-start;
+      padding: 0;
     }
   `
 )
