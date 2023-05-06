@@ -68,6 +68,10 @@ export const StyledTabs = styled(Tabs)(
 
     .MuiButtonBase-root {
       border-bottom: 2px solid ${colors.textGrayLight};
+
+      ${theme.breakpoints.up('md')} {
+        border-bottom: none;
+      }
     }
   `
 )
