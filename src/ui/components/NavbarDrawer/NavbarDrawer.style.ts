@@ -87,6 +87,7 @@ export const StyledButton = styled(MuiLink)(
       background-color: transparent;
       border-radius: ${theme.shape.borderRadius}px;
       font-weight: 600;
+      text-decoration: none;
       transition: ${theme.transitions.create('transform', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
