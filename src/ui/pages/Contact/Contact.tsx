@@ -16,7 +16,7 @@ export default function Contact() {
       </ContentContainer>
 
       <StyledLinkButton href="mailto:padovanitr@gmail.com" target="_blank">
-        Say hello
+        {ContactTexts.LinkButtonLabel}
       </StyledLinkButton>
     </StyledContainer>
   )

@@ -68,7 +68,7 @@ export const StyledDescription = styled(Typography)(
     font-weight: 300;
     line-height: 30px;
     text-align: center;
-    padding: ${theme.spacing(1, 40)};
+    padding: 0;
 
     ${theme.breakpoints.up('md')} {
       padding: ${theme.spacing(1, 15)};
@@ -76,6 +76,10 @@ export const StyledDescription = styled(Typography)(
 
     ${theme.breakpoints.up('lg')} {
       padding: ${theme.spacing(1, 20)};
+    }
+
+    ${theme.breakpoints.up('xl')} {
+      padding: ${theme.spacing(1, 40)};
     }
   `
 )
