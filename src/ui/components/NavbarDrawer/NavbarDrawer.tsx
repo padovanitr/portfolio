@@ -1,15 +1,22 @@
 import { Drawer, IconButton, List } from '@mui/material'
 import { useLocation } from 'react-router-dom'
 import {
+  ButtonContainer,
   CloseDrawerSvgIcon,
   DrawerContainer,
   DrawerHeader,
+  StyledButton,
   StyledLink,
   StyledListItem,
   StyledPageText,
 } from './NavbarDrawer.style'
 import { CancelIcon } from '../../../assets/icons'
 import { pages } from '../Navbar/Navbar.utils'
+import Resume from '../../../assets/docs/thiago-padovani-resume.pdf'
+
+export enum NavbarDrawerTexts {
+  ResumeButtonLabel = 'Resume',
+}
 
 export interface NavbarDrawerProps {
   open: boolean
@@ -41,6 +48,10 @@ export default function NavbarDrawer({ open, onClose }: NavbarDrawerProps) {
             </StyledListItem>
           ))}
         </List>
+
+        <ButtonContainer>
+          <StyledButton href={Resume}>{NavbarDrawerTexts.ResumeButtonLabel}</StyledButton>
+        </ButtonContainer>
       </DrawerContainer>
     </Drawer>
   )

@@ -23,4 +23,5 @@ export const pages = [
 
 export const NavbarTexts = {
   ThemeIconButtonTitle: (mode: string) => `Active ${mode === 'dark' ? 'light' : 'dark'} theme`,
+  ResumeButtonLabel: 'Resume',
 }

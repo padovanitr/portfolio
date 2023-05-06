@@ -10,6 +10,7 @@ import {
   SocialMediaSvgIcon,
   StyleIconButtonTheme,
   StyledAppBar,
+  StyledButton,
   StyledContainer,
   StyledLink,
   StyledList,
@@ -28,6 +29,7 @@ import {
 import NavbarDrawer from '../NavbarDrawer/NavbarDrawer'
 import { useGetSelectedSectionScroll } from '../../../utils/hooks/useGetSelectedSectionScroll'
 import { ColorModeContext } from '../../../utils/ColorModeContextProvider'
+import Resume from '../../../assets/docs/thiago-padovani-resume.pdf'
 
 export default function NavBar() {
   const [openDrawer, setOpenDrawer] = useState(false)
@@ -97,6 +99,11 @@ export default function NavBar() {
           >
             {mode === 'dark' ? <SvgIcon component={SunIcon} /> : <SvgIcon component={MoonIcon} />}
           </StyleIconButtonTheme>
+          {desktopMatches && (
+            <StyledButton href={Resume} target="_blank" rel="noopener noreferrer">
+              {NavbarTexts.ResumeButtonLabel}
+            </StyledButton>
+          )}
           {!desktopMatches && !openDrawer && (
             <IconButton onClick={() => setOpenDrawer(true)}>
               <HamburguerSvgIcon inheritViewBox component={HamburguerIcon} />

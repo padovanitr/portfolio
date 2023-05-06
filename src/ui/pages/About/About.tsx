@@ -8,6 +8,7 @@ import {
   StyledDescription,
   StyledImage,
   StyledTitle,
+  TabsInfoContainer,
 } from './About.style'
 import { AboutTexts } from './About.utils'
 import AboutTabs from './AboutTabs/AboutTabs'
@@ -34,14 +35,14 @@ export default function About() {
 
           <AboutTabs sx={{ marginTop: '2rem' }} tabActive={tabActive} handleChange={handleChange} />
 
-          <Box>
+          <TabsInfoContainer>
             <TabPanel isSelectedPanel={tabActive === 'Skills'}>
               <SkillsInfo />
             </TabPanel>
             <TabPanel isSelectedPanel={tabActive === 'Education'}>
               <EducationInfo />
             </TabPanel>
-          </Box>
+          </TabsInfoContainer>
         </Box>
       </ContentContainer>
     </StyledContainer>

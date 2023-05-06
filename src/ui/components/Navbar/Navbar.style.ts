@@ -9,6 +9,7 @@ import {
   Typography,
   css,
   styled,
+  Link as MuiLink,
 } from '@mui/material'
 import { HashLink as Link } from 'react-router-hash-link'
 import { transientProps } from '../../../utils/transientProps'
@@ -185,3 +186,39 @@ export const LogoSvgIcon = styled(SvgIcon)(
     align-self: center;
   `
 ) as StyledSvgIconType
+
+export const StyledButton = styled(MuiLink)(
+  ({ theme }) => css`
+    &&&.MuiLink-root {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: ${theme.spacing(2.2)};
+      align-self: center;
+      text-transform: none;
+      box-shadow: none;
+      color: ${theme.palette.mode === 'dark' ? colors.white : colors.darkGray};
+      border: 1px solid ${colors.red};
+      font-size: 1rem;
+      width: 100px;
+      align-self: center;
+      background-color: transparent;
+      border-radius: ${theme.shape.borderRadius}px;
+      font-weight: 600;
+      margin: ${theme.spacing(0, 0, 0, 4)};
+      text-decoration: none;
+      transition: ${theme.transitions.create('transform', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+      })};
+
+      &:hover {
+        background-color: ${colors.red};
+        border: 1px solid ${colors.red};
+        color: ${theme.palette.mode === 'dark' ? theme.palette.primary.contrastText : colors.white};
+        transform: translateY(-0.3rem);
+      }
+    }
+  `
+)

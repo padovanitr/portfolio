@@ -1,4 +1,4 @@
-import { Box, ListItem, SvgIcon, Typography } from '@mui/material'
+import { Box, ListItem, SvgIcon, Typography, Link as MuiLink } from '@mui/material'
 import { HashLink as Link } from 'react-router-hash-link'
 import { styled, css } from '@mui/material/styles'
 import { colors } from '../../../utils/colors'
@@ -57,3 +57,47 @@ export const CloseDrawerSvgIcon = styled(SvgIcon)(
     height: 30px;
   `
 ) as StyledSvgIconType
+
+export const ButtonContainer = styled(Box)(
+  ({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px auto;
+    height: 200px;
+  `
+)
+
+export const StyledButton = styled(MuiLink)(
+  ({ theme }) => css`
+    &&&.MuiLink-root {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: ${theme.spacing(2.2)};
+      align-self: center;
+      text-transform: none;
+      box-shadow: none;
+      color: ${theme.palette.mode === 'dark' ? colors.white : colors.darkGray};
+      border: 1px solid ${colors.red};
+      font-size: 1rem;
+      width: 160px;
+      align-self: center;
+      background-color: transparent;
+      border-radius: ${theme.shape.borderRadius}px;
+      font-weight: 600;
+      transition: ${theme.transitions.create('transform', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+      })};
+
+      &:hover {
+        background-color: ${colors.red};
+        border: 1px solid ${colors.red};
+        color: ${theme.palette.mode === 'dark' ? theme.palette.primary.contrastText : colors.white};
+        transform: translateY(-0.3rem);
+      }
+    }
+  `
+)

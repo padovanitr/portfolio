@@ -119,3 +119,13 @@ export const StyledTypography = styled(Typography)(
     ${TypographyMixin(theme)}
   `
 )
+
+export const TabsInfoContainer = styled(Box)(
+  ({ theme }) => css`
+    min-height: 405px;
+
+    ${theme.breakpoints.up('md')} {
+      min-height: 315px;
+    }
+  `
+)
