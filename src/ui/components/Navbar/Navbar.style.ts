@@ -1,7 +1,6 @@
 import {
   AppBar,
   Box,
-  Container,
   IconButton,
   List,
   ListItem,
@@ -36,13 +35,15 @@ export const StyledAppBar = styled(
 )
 
 export const StyledContainer = styled(
-  Container,
+  Box,
   transientProps
 )<{ $fixedposition: boolean }>(
   ({ theme, $fixedposition }) => css`
     padding: ${$fixedposition ? theme.spacing(0.7, 0) : theme.spacing(2.5, 0)};
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
 
     &&&.MuiContainer-root {
       padding-left: 0;

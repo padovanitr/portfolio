@@ -10,6 +10,7 @@ export const StyledContainer = styled(Box)(
     padding: ${theme.spacing(7, 3)};
     display: flex;
     align-items: flex-start;
+    justify-content: center;
 
     ${theme.breakpoints.up('lg')} {
       padding: ${theme.spacing(5, 8, 8)};

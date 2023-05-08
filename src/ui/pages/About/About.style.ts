@@ -10,6 +10,7 @@ export const StyledContainer = styled(Box)(
     padding: ${theme.spacing(10, 3)};
     display: flex;
     align-items: flex-start;
+    justify-content: center;
 
     ${theme.breakpoints.up('lg')} {
       padding: ${theme.spacing(12, 15)};
@@ -21,11 +22,12 @@ export const ContentContainer = styled(Box)(
   ({ theme }) => css`
     display: flex;
     align-items: center;
-    gap: ${theme.spacing(6)};
+    gap: ${theme.spacing(10)};
     flex-direction: column;
 
     ${theme.breakpoints.up('lg')} {
       flex-direction: row;
+      align-items: flex-start;
     }
   `
 )
