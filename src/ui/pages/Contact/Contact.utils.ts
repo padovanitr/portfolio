@@ -1,6 +1,6 @@
 export enum ContactTexts {
   Title = 'Get In Touch',
-  Description = 'Feel free to contact me by submitting the form below. Whether you have a question, talk about new opportunities or just want to say hi, I’ll try my best to get back to you!',
+  Description = 'Feel free to contact me by hiting the button below. Whether you have a question, talk about new opportunities or just want to say hi, I’ll try my best to get back to you!',
   NameFieldLabel = 'Full name',
   EmailFieldLabel = 'Email',
   SubjectFieldLabel = 'Subject',

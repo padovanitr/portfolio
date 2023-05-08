@@ -6,14 +6,20 @@ export const StyledPaperContainer = styled(Paper)(
     background: ${theme.palette.mode === 'dark' ? colors.mainBlack : 'transaparent'};
     max-width: 350px;
     height: auto;
+    filter: grayscale(0%);
 
-    transition: ${theme.transitions.create('transform', {
+    transition: ${theme.transitions.create(['transform', 'filter'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     })};
 
+    ${theme.breakpoints.up('lg')} {
+      filter: grayscale(100%);
+    }
+
     &:hover {
       transform: scale(1.05);
+      filter: grayscale(0%);
     }
   `
 )

@@ -19,7 +19,12 @@ export default function Articles() {
         </Box>
         <StyledGridContainer>
           {articlesInfo.map(({ title, id, image, url, preview }) => (
-            <Link sx={{ textDecoration: 'none' }} key={id} href={url} target="_blank">
+            <Link
+              sx={{ textDecoration: 'none', position: 'relative' }}
+              key={id}
+              href={url}
+              target="_blank"
+            >
               <Card title={title} image={image} preview={preview} />
             </Link>
           ))}
