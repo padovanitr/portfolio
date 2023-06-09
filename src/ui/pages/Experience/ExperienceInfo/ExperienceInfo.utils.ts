@@ -8,6 +8,7 @@ export const experienceInfo = [
     endDate: 'current',
     description: [
       'In this role I’m responsible for architecting and designing technical solutions for complex problems on the project.',
+      'Basically in my day to day I usually review my colleagues PRs, pick some tickets on Jira to work on following the priority labels, participate on team meetings. I also create PRs for the bugs or features, fix comments and merge the approved ones.',
       'Tech used: HTML, CSS, Styled-components, Material UI, Reactjs, JavaScript, TypeScript, Redux Tool Kit, Jest, React Testing Library and Cypress.',
       'Currently I’m working on a banking web application for an American Credit Union.',
       'I also review PRs of my teammates and present demos to the clients',

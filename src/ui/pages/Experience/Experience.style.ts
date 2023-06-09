@@ -5,7 +5,7 @@ export const StyledContainer = styled(Box)(
   ({ theme }) => css`
     background-color: ${theme.palette.background.default};
     height: auto;
-    min-height: 700px;
+    min-height: 750px;
     width: 100%;
     margin: 0;
     padding: ${theme.spacing(7, 0, 7, 3)};
