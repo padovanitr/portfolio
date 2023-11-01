@@ -4,7 +4,7 @@ export const experienceInfo = [
     position: 'Frontend Developer',
     company: 'Loka',
     location: 'USA (remote)',
-    startDate: 'nov 2022',
+    startDate: 'may 2022',
     endDate: 'current',
     description: [
       'In this role I’m responsible for architecting and designing technical solutions for complex problems on the project.',
@@ -15,7 +15,7 @@ export const experienceInfo = [
     ],
     website: 'https://loka.com/',
   },
-  {
+  /* {
     id: 2,
     position: 'Frontend Developer',
     company: 'Bridge351',
@@ -27,7 +27,7 @@ export const experienceInfo = [
       'Had the opportunity to learn more about Redux Tool Kit, Jest, React Testing Library and Cypress',
     ],
     website: 'https://www.bridge351.com/',
-  },
+  }, */
   {
     id: 3,
     position: 'Frontend Developer',
