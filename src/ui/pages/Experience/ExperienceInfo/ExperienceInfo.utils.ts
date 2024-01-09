@@ -8,10 +8,10 @@ export const experienceInfo = [
     endDate: 'current',
     description: [
       'In this role I’m responsible for architecting and designing technical solutions for complex problems on the project.',
-      'Basically in my day to day I usually review my colleagues PRs, pick some tickets on Jira to work on following the priority labels, participate on team meetings. I also create PRs for the bugs or features, fix comments and merge the approved ones.',
+      'Among my responsibilities are making presentations of sprint deliveries to the clients and review colleagues code including juniors and seniors.',
+      'As it’s one of my main strengths, I proposed a way to standardize the application’s responsiveness following good practices to cover the Figma breakpoints for the application to scale well.',
+      'In my current project, which is a banking web application for an American Credit Union, I managed to implement a complex nav bar based on Notion menu behavior using recursive programming.',
       'Tech used: HTML, CSS, Styled-components, Material UI, Reactjs, JavaScript, TypeScript, Redux Tool Kit, Jest, React Testing Library and Cypress.',
-      'Currently I’m working on a banking web application for an American Credit Union.',
-      'I also review PRs of my teammates and present demos to the clients',
     ],
     website: 'https://loka.com/',
   },

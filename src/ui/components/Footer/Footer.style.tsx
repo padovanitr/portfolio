@@ -87,3 +87,39 @@ export const StyledCopyright = styled(Typography)(
     font-weight: 500;
   `
 )
+
+export const StyledLinkButton = styled(Link)(
+  ({ theme }) => css`
+    &&&.MuiLink-root {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: ${theme.spacing(2)};
+      align-self: center;
+      text-transform: none;
+      box-shadow: none;
+      color: ${colors.white};
+      border: 1px solid ${colors.red};
+      font-size: 1rem;
+      width: auto;
+      align-self: center;
+      background-color: transparent;
+      border-radius: ${theme.shape.borderRadius}px;
+      font-weight: 600;
+      margin: 0;
+      text-decoration: none;
+      transition: ${theme.transitions.create('transform', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+      })};
+
+      &:hover {
+        background-color: ${colors.red};
+        border: 1px solid ${colors.red};
+        color: ${colors.white};
+        transform: translateY(-0.3rem);
+      }
+    }
+  `
+)

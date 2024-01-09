@@ -1,4 +1,4 @@
-import { SvgIcon } from '@mui/material'
+import { Box, SvgIcon } from '@mui/material'
 import {
   FooterGridContainer,
   FooterItem,
@@ -6,6 +6,7 @@ import {
   LogoSvgIcon,
   StyledContainer,
   StyledCopyright,
+  StyledLinkButton,
   StyledMediaLink,
 } from './Footer.style'
 import { GithubIcon, LinkedinIcon, LogoIcon } from '../../../assets/icons'
@@ -27,9 +28,14 @@ export default function Footer() {
           </StyledMediaLink>
         </FooterItem>
         <FooterItem item>
-          <StyledCopyright>
-            Made with <span style={{ color: '#e25555' }}>&#9829;</span> by Thiago Padovani
-          </StyledCopyright>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <StyledCopyright>
+              Made with <span style={{ color: '#e25555' }}>&#9829;</span> by Thiago Padovani
+            </StyledCopyright>
+            <StyledLinkButton href="https://www.buymeacoffee.com/padovani" target="_blank">
+              <span style={{ marginRight: '0.5rem' }}>☕</span> Buy me a coffee
+            </StyledLinkButton>
+          </Box>
         </FooterItem>
       </FooterGridContainer>
     </StyledContainer>

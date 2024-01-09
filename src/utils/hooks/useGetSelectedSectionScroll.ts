@@ -16,10 +16,10 @@ export const useGetSelectedSectionScroll = () => {
       case position >= 1400 && position < 2300:
         setSelectedSelection('#experience')
         break
-      case position >= 2300 && position < 3000:
+      case position >= 2300 && position < 3500:
         setSelectedSelection('#articles')
         break
-      case position >= 3000 && position < 3900:
+      case position >= 3500 && position < 3900:
         setSelectedSelection('#contact')
         break
       default:
