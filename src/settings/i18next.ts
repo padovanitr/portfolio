@@ -3,6 +3,9 @@ import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import englishTrans from './locales/en/translation.json'
 import frenchTrans from './locales/fr/translation.json'
+import spanishTrans from './locales/es/translation.json'
+import portugueseTrans from './locales/pt/translation.json'
+import { defaultLanguage, fallbackLanguage } from './i18nextConfig'
 
 i18n
   .use(LanguageDetector)
@@ -18,9 +21,15 @@ i18n
       fr: {
         translation: frenchTrans,
       },
+      es: {
+        translation: spanishTrans,
+      },
+      pt: {
+        translation: portugueseTrans,
+      },
     },
-    lng: 'en', // if you're using a language detector, do not define the lng option
-    fallbackLng: 'en',
+    lng: defaultLanguage, // if you're using a language detector, do not define the lng option
+    fallbackLng: fallbackLanguage,
     interpolation: {
       escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
     },

@@ -30,6 +30,7 @@ import NavbarDrawer from '../NavbarDrawer/NavbarDrawer'
 import { useGetSelectedSectionScroll } from '../../../utils/hooks/useGetSelectedSectionScroll'
 import { ColorModeContext } from '../../../utils/ColorModeContextProvider'
 import Resume from '../../../assets/docs/thiago-padovani-resume.pdf'
+import LanguageSelector from '../LanguageSelector'
 
 export default function NavBar() {
   const [openDrawer, setOpenDrawer] = useState(false)
@@ -85,6 +86,7 @@ export default function NavBar() {
           )}
         </LeftContent>
         <RightContent>
+          <LanguageSelector />
           <SocialMediaContainer>
             <Link
               href="https://www.linkedin.com/in/thiago-padovani"
