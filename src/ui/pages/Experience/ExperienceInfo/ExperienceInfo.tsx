@@ -1,5 +1,6 @@
 import { Box, Link, List, useMediaQuery, useTheme } from '@mui/material'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { experienceInfo } from './ExperienceInfo.utils'
 import { StyledTab, StyledTabs } from '../Experience.style'
 import {
@@ -12,6 +13,7 @@ import {
 } from './ExperienceInfo.style'
 
 export default function ExperienceInfo() {
+  const { t } = useTranslation()
   const theme = useTheme()
   const isLargerScreen = useMediaQuery(theme.breakpoints.up('md'))
   const [tabActive, setTabActive] = useState('Loka')
@@ -28,13 +30,13 @@ export default function ExperienceInfo() {
         value={tabActive}
         orientation={isLargerScreen ? 'vertical' : 'horizontal'}
       >
-        {experienceInfo.map(({ id, company }) => (
+        {experienceInfo(t).map(({ id, company }) => (
           <StyledTab key={id} id={String(id)} label={company} value={company} />
         ))}
       </StyledTabs>
 
       <Box>
-        {experienceInfo.map(
+        {experienceInfo(t).map(
           ({ id, position, company, location, startDate, endDate, description, website }) => (
             <StyledTabPanel key={id} isSelectedPanel={tabActive === company}>
               <Box>

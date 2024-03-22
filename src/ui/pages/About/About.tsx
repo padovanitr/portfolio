@@ -1,5 +1,6 @@
 import { Box } from '@mui/material'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import ProfilePictureLight from '../../../assets/img/profile.avif'
 import {
   ContentContainer,
@@ -10,13 +11,13 @@ import {
   StyledTitle,
   TabsInfoContainer,
 } from './About.style'
-import { AboutTexts } from './About.utils'
 import AboutTabs from './AboutTabs/AboutTabs'
 import EducationInfo from './EducationInfo/EducationInfo'
 import TabPanel from '../../components/TabPanel/TabPanel'
 import SkillsInfo from './SkillsInfo/SkillsInfo'
 
 export default function About() {
+  const { t } = useTranslation()
   const [tabActive, setTabActive] = useState('Skills')
 
   const handleChange = (_: React.SyntheticEvent, newValue: string) => {
@@ -30,8 +31,8 @@ export default function About() {
           <StyledImage src={ProfilePictureLight} alt="thiago padovani profile picture" />
         </ImageContainer>
         <Box sx={{ maxWidth: '746px' }}>
-          <StyledTitle variant="h2">{AboutTexts.Title}</StyledTitle>
-          <StyledDescription>{AboutTexts.Description}</StyledDescription>
+          <StyledTitle variant="h2">{t('aboutTitle')}</StyledTitle>
+          <StyledDescription>{t('aboutDescription')}</StyledDescription>
 
           <AboutTabs sx={{ marginTop: '2rem' }} tabActive={tabActive} handleChange={handleChange} />
 

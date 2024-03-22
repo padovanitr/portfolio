@@ -2,8 +2,6 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import englishTrans from './locales/en/translation.json'
-import frenchTrans from './locales/fr/translation.json'
-import spanishTrans from './locales/es/translation.json'
 import portugueseTrans from './locales/pt/translation.json'
 import { defaultLanguage, fallbackLanguage } from './i18nextConfig'
 
@@ -17,12 +15,6 @@ i18n
     resources: {
       en: {
         translation: englishTrans,
-      },
-      fr: {
-        translation: frenchTrans,
-      },
-      es: {
-        translation: spanishTrans,
       },
       pt: {
         translation: portugueseTrans,
