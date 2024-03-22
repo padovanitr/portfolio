@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import { useState } from 'react'
-import ProfilePictureLight from '../../../assets/img/profile.jpg'
+import ProfilePictureLight from '../../../assets/img/profile.avif'
 import {
   ContentContainer,
   ImageContainer,
