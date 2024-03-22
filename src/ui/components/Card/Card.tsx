@@ -12,12 +12,13 @@ export interface CardProps {
   image: string
   title: string
   preview: string
+  imageAlt: string
 }
 
-export default function Card({ image, title, preview }: CardProps) {
+export default function Card({ image, title, preview, imageAlt }: CardProps) {
   return (
     <StyledPaperContainer>
-      <StyledImage src={image} />
+      <StyledImage src={image} alt={imageAlt} />
       <DescriptionContainer>
         <StyledTitle>{title}</StyledTitle>
         <StyledPreview>{preview}</StyledPreview>

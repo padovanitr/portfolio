@@ -18,6 +18,7 @@ export const articlesInfo = [
       'Nextjs is proving that is a very complete framework, mainly because we’re talking about a full-stack tool, it uses React under the hood…',
     url: 'https://medium.com/@padovanitr/nextjs-13-new-features-5c304b6ae516',
     image: NextjsBg,
+    imageAlt: 'nextjs 13 new features',
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ export const articlesInfo = [
       'One of the most important things that every React developer must know is how to handle the state. And when we talk about this, the main…',
     url: 'https://medium.com/@padovanitr/how-to-apply-usereducer-336b782608a1',
     image: UseReducerBg,
+    imageAlt: 'how to apply useReducer hook',
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export const articlesInfo = [
       'Git is one of the tool that developers most frequently use, specially if we’re talking about a professional environment when you’re working…',
     url: 'https://medium.com/@padovanitr/git-rebase-how-it-works-e4b395d97718',
     image: GitRebaseBg,
+    imageAlt: 'how git rebase works',
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ export const articlesInfo = [
       'Nowadays one the of the keywords for success in web development is productivity and in the community we can find lots of tool to improve…',
     url: 'https://medium.com/@padovanitr/how-to-setup-rtk-query-and-openapi-16816e9e7098',
     image: RtkOpenApiBg,
+    imageAlt: 'how to setup redux toolkit query with openapi',
   },
   {
     id: 5,
@@ -50,6 +54,7 @@ export const articlesInfo = [
       'Even the most novice front-end developers have already had to fetch data from some API and built something with that. And sometimes we…',
     url: 'https://medium.com/@padovanitr/rtk-query-beginners-tutorial-473705824246',
     image: RtkBeginnersBg,
+    imageAlt: 'tutotial for redux toolkit query for beginners',
   },
   {
     id: 6,
@@ -58,5 +63,6 @@ export const articlesInfo = [
       'We can say for sure that one of the most used tools in React are the hooks. They’re a new addition in the version 16.8 and came to simplify…',
     url: 'https://medium.com/@padovanitr/how-to-apply-usememo-and-usecallback-wisely-78487454a985',
     image: UseMemoUseCallbackBg,
+    imageAlt: 'How to apply the hooks useMemo and useCallback wisely',
   },
 ]
