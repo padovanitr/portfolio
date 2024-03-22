@@ -86,10 +86,14 @@ export default function NavBar() {
         </LeftContent>
         <RightContent>
           <SocialMediaContainer>
-            <Link href="https://www.linkedin.com/in/thiago-padovani" target="_blank">
+            <Link
+              href="https://www.linkedin.com/in/thiago-padovani"
+              target="_blank"
+              aria-label="Linkedin link"
+            >
               <SocialMediaSvgIcon inheritViewBox component={LinkedinIcon} />
             </Link>
-            <Link href="https://github.com/padovanitr" target="_blank">
+            <Link href="https://github.com/padovanitr" target="_blank" aria-label="Github link">
               <SocialMediaSvgIcon inheritViewBox component={GithubIcon} />
             </Link>
           </SocialMediaContainer>

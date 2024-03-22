@@ -20,10 +20,18 @@ export default function Footer() {
           <LogoSubtitle>Thiago Padovani</LogoSubtitle>
         </FooterItem>
         <FooterItem item>
-          <StyledMediaLink href="https://www.linkedin.com/in/thiago-padovani" target="_blank">
+          <StyledMediaLink
+            href="https://www.linkedin.com/in/thiago-padovani"
+            target="_blank"
+            aria-label="Linkedin link"
+          >
             <SvgIcon inheritViewBox component={LinkedinIcon} />
           </StyledMediaLink>
-          <StyledMediaLink href="https://github.com/padovanitr" target="_blank">
+          <StyledMediaLink
+            href="https://github.com/padovanitr"
+            target="_blank"
+            aria-label="Github link"
+          >
             <SvgIcon inheritViewBox component={GithubIcon} />
           </StyledMediaLink>
         </FooterItem>
