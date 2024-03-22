@@ -27,7 +27,7 @@ export default function About() {
     <StyledContainer id="about">
       <ContentContainer>
         <ImageContainer>
-          <StyledImage src={ProfilePictureLight} />
+          <StyledImage src={ProfilePictureLight} alt="thiago padovani profile picture" />
         </ImageContainer>
         <Box sx={{ maxWidth: '746px' }}>
           <StyledTitle variant="h2">{AboutTexts.Title}</StyledTitle>
