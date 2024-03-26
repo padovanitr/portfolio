@@ -1,5 +1,6 @@
 import { Drawer, IconButton, List } from '@mui/material'
 import { useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import {
   ButtonContainer,
   CloseDrawerSvgIcon,
@@ -24,6 +25,7 @@ export interface NavbarDrawerProps {
 }
 
 export default function NavbarDrawer({ open, onClose }: NavbarDrawerProps) {
+  const { t } = useTranslation()
   const location = useLocation()
   const selectedPage = location.hash === '' ? '#home' : location.hash
 
@@ -40,7 +42,7 @@ export default function NavbarDrawer({ open, onClose }: NavbarDrawerProps) {
           </IconButton>
         </DrawerHeader>
         <List>
-          {pages.map(({ title, path }) => (
+          {pages(t).map(({ title, path }) => (
             <StyledListItem key={title} onClick={() => handleClickItem(path)}>
               <StyledLink to={path}>
                 <StyledPageText $isselected={selectedPage === path}>{title}</StyledPageText>
@@ -50,7 +52,7 @@ export default function NavbarDrawer({ open, onClose }: NavbarDrawerProps) {
         </List>
 
         <ButtonContainer>
-          <StyledButton href={Resume}>{NavbarDrawerTexts.ResumeButtonLabel}</StyledButton>
+          <StyledButton href={Resume}>{t('resume')}</StyledButton>
         </ButtonContainer>
       </DrawerContainer>
     </Drawer>

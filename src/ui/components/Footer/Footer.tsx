@@ -1,4 +1,5 @@
 import { Box, SvgIcon } from '@mui/material'
+import { useTranslation } from 'react-i18next'
 import {
   FooterGridContainer,
   FooterItem,
@@ -12,6 +13,8 @@ import {
 import { GithubIcon, LinkedinIcon, LogoIcon } from '../../../assets/icons'
 
 export default function Footer() {
+  const { t } = useTranslation()
+
   return (
     <StyledContainer>
       <FooterGridContainer container>
@@ -38,10 +41,15 @@ export default function Footer() {
         <FooterItem item>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <StyledCopyright>
-              Made with <span style={{ color: '#e25555' }}>&#9829;</span> by Thiago Padovani
+              {t('madeWith')}{' '}
+              <span key={0} style={{ color: '#e25555' }}>
+                &#9829;
+              </span>{' '}
+              {t('by')} Thiago Padovani
             </StyledCopyright>
             <StyledLinkButton href="https://www.buymeacoffee.com/padovani" target="_blank">
-              <span style={{ marginRight: '0.5rem' }}>☕</span> Buy me a coffee
+              <span style={{ marginRight: '0.5rem' }}>☕</span>
+              {t('buyMeACoffee')}
             </StyledLinkButton>
           </Box>
         </FooterItem>

@@ -1,27 +1,31 @@
-export const pages = [
+import { TFunction } from 'i18next'
+
+export const pages = (t: TFunction<'translation', undefined>) => [
   {
     title: 'Home',
     path: '#home',
   },
   {
-    title: 'About',
+    title: t('navbarAbout'),
     path: '#about',
   },
   {
-    title: 'Experience',
+    title: t('navbarExperience'),
     path: '#experience',
   },
   {
-    title: 'Articles',
+    title: t('navbarArticles'),
     path: '#articles',
   },
   {
-    title: 'Contact',
+    title: t('navbarContact'),
     path: '#contact',
   },
 ]
 
-export const NavbarTexts = {
-  ThemeIconButtonTitle: (mode: string) => `Active ${mode === 'dark' ? 'light' : 'dark'} theme`,
-  ResumeButtonLabel: 'Resume',
+export const NavbarTexts = (t?: TFunction<'translation', undefined>) => {
+  return {
+    ThemeIconButtonTitle: (mode: string) => `Active ${mode === 'dark' ? 'light' : 'dark'} theme`,
+    ResumeButtonLabel: t?.('resume'),
+  }
 }

@@ -1,4 +1,5 @@
 import { Box, Link } from '@mui/material'
+import { useTranslation } from 'react-i18next'
 import Card from '../../components/Card/Card'
 import {
   ContentContainer,
@@ -7,15 +8,16 @@ import {
   StyledGridContainer,
   StyledTitle,
 } from './Articles.style'
-import { ArticlesTexts, articlesInfo } from './Articles.utils'
+import { articlesInfo } from './Articles.utils'
 
 export default function Articles() {
+  const { t } = useTranslation()
   return (
     <StyledContainer id="articles">
       <ContentContainer>
         <Box>
-          <StyledTitle variant="h2">{ArticlesTexts.Title}</StyledTitle>
-          <StyledDescription>{ArticlesTexts.Description}</StyledDescription>
+          <StyledTitle variant="h2">{t('myArticles')}</StyledTitle>
+          <StyledDescription>{t('myArticlesDesciption')}</StyledDescription>
         </Box>
         <StyledGridContainer>
           {articlesInfo.map(({ title, id, image, url, preview, imageAlt }) => (

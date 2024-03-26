@@ -1,5 +1,6 @@
 import { IconButton, Link, SvgIcon, useMediaQuery, useTheme } from '@mui/material'
 import { useContext, useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import {
   HamburguerSvgIcon,
   LeftContent,
@@ -30,8 +31,10 @@ import NavbarDrawer from '../NavbarDrawer/NavbarDrawer'
 import { useGetSelectedSectionScroll } from '../../../utils/hooks/useGetSelectedSectionScroll'
 import { ColorModeContext } from '../../../utils/ColorModeContextProvider'
 import Resume from '../../../assets/docs/thiago-padovani-resume.pdf'
+import LanguageSelector from '../LanguageSelector'
 
 export default function NavBar() {
+  const { t } = useTranslation()
   const [openDrawer, setOpenDrawer] = useState(false)
   const theme = useTheme()
   const desktopMatches = useMediaQuery(theme.breakpoints.up('lg'))
@@ -71,7 +74,7 @@ export default function NavBar() {
           {desktopMatches && (
             <StyledNav component="nav">
               <StyledList>
-                {pages.map(({ title, path }) => (
+                {pages(t).map(({ title, path }) => (
                   <StyledListItem key={title} $isselected={selectedSection === path}>
                     <StyledLink to={path} smooth>
                       <ListItemTypography $isselected={selectedSection === path}>
@@ -85,6 +88,7 @@ export default function NavBar() {
           )}
         </LeftContent>
         <RightContent>
+          <LanguageSelector />
           <SocialMediaContainer>
             <Link
               href="https://www.linkedin.com/in/thiago-padovani"
@@ -99,13 +103,13 @@ export default function NavBar() {
           </SocialMediaContainer>
           <StyleIconButtonTheme
             onClick={toggleColorMode}
-            title={NavbarTexts.ThemeIconButtonTitle(mode)}
+            title={NavbarTexts().ThemeIconButtonTitle(mode)}
           >
             {mode === 'dark' ? <SvgIcon component={SunIcon} /> : <SvgIcon component={MoonIcon} />}
           </StyleIconButtonTheme>
           {desktopMatches && (
             <StyledButton href={Resume} target="_blank" rel="noopener noreferrer">
-              {NavbarTexts.ResumeButtonLabel}
+              {NavbarTexts(t).ResumeButtonLabel}
             </StyledButton>
           )}
           {!desktopMatches && !openDrawer && (

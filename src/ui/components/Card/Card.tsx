@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import {
   ButtonContainer,
   DescriptionContainer,
@@ -16,6 +17,7 @@ export interface CardProps {
 }
 
 export default function Card({ image, title, preview, imageAlt }: CardProps) {
+  const { t } = useTranslation()
   return (
     <StyledPaperContainer>
       <StyledImage src={image} alt={imageAlt} />
@@ -24,7 +26,7 @@ export default function Card({ image, title, preview, imageAlt }: CardProps) {
         <StyledPreview>{preview}</StyledPreview>
       </DescriptionContainer>
       <ButtonContainer>
-        <StyledButton>Read more</StyledButton>
+        <StyledButton>{t('readMore')}</StyledButton>
       </ButtonContainer>
     </StyledPaperContainer>
   )

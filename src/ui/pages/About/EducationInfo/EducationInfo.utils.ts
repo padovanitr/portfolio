@@ -1,4 +1,6 @@
-export const educationInfo = [
+import { TFunction } from 'i18next'
+
+export const educationInfo = (t: TFunction<'translation', undefined>) => [
   {
     id: 1,
     title: 'Bachelor’s Frontend Developer',
@@ -16,7 +18,7 @@ export const educationInfo = [
     company: 'Rocketseat',
     location: 'Brazil',
     startDate: '2022',
-    endDate: 'current',
+    endDate: t('current'),
     description: [
       'Course focused in the web development of modern and reactive interfaces using ReactJS and other technologies such as: TypeScript, NextJS, React Query, Jest, Prismic, Chakra UI and more.',
     ],
