@@ -1,5 +1,5 @@
 {
-  "welcome": "Bem-vindo ao meu portifólio",
+  "welcome": "Bem-vindo(a) ao meu portifólio",
   "namewelcome": "Olá, eu sou o Thiago Padovani",
   "job": "Desenvolvedor de Software",
   "navbarAbout": "Sobre",
@@ -25,5 +25,25 @@
   "supernossoStartDate": "agosto de 2020",
   "supernossoEndDate": "abril de 2022",
   "obrazulStartDate": "março de 2020",
-  "obrazulEndDate": "julho de 2020"
+  "obrazulEndDate": "julho de 2020",
+  "lokaExpecience1": "Nesta função sou responsável por arquitetar e projetar soluções técnicas para problemas complexos do projeto.",
+  "lokaExperience2": "Entre minhas responsabilidades estão fazer apresentações de entregas de sprint para os clientes e revisar códigos de colegas, incluindo juniores e seniores.",
+  "lokaExperience3": "Por ser um dos meus principais pontos fortes, propus uma forma de padronizar a capacidade de resposta da aplicação seguindo boas práticas para cobrir os breakpoints do Figma para que a aplicação possa escalar bem.",
+  "lokaExperience4": "No meu projeto atual, que é um aplicativo bancário web para uma cooperativa de crédito americana, consegui implementar uma barra de navegação complexa baseada no comportamento do menu do Notion usando programação recursiva.",
+  "lokaExperience5": "Tecnologias utilizadas: HTML, CSS, Styled-components, Material UI, Reactjs, JavaScript, TypeScript, Redux Tool Kit, Jest, React Testing Library and Cypress.",
+  "supernossoExp1": "Realizei manutenção, propus melhorias e desenvolvi novas funcionalidades na plataforma do e-commerce. Tecnologia utilizada: JavaScript, TypeScript, jQuery, ReactJS, HTML, CSS, Sass, Less e Vtex.",
+  "supernossoExp2": "Desenvolvi novas funcionalidades no site Supernossoemcasa.",
+  "supernossoExp3": "Participei de toda a reformulação do site Apoioentrega melhorando o desempenho e UX.",
+  "obrazulExp1": "Desenvolvi e promovi implementações no marketplace da empresa utilizando tecnologias como HTML, CSS, Sass, JavaScript, jQuery, Reactjs, Python, Django e PostegreSQL.",
+  "obrazulExp2": "Implementei e participei do desenvolvimento do dashboard do cliente e do gerador de relatórios de resultados.",
+  "obrazulExp3": "Utilização do Git como sistema de controle de versão de código e Trello para gerenciamento de tarefas do projeto.",
+  "myArticles": "Meus Artigos",
+  "myArticlesDesciption": "Estes são alguns dos artigos que escrevi no Medium, você pode encontrar algo interessante para ler.",
+  "getInTouch": "Entre em contato",
+  "getInTouchDesc": "Fique à vontade para entrar em contato comigo clicando no botão abaixo. Quer você tenha alguma dúvida, fale sobre novas oportunidades ou apenas queira dizer oi, farei o possível para entrar em contato com você!",
+  "sayHelloBtn": "Diga olá",
+  "readMore": "Leia mais",
+  "buyMeACoffee": "Me pague um café",
+  "madeWith": "Feito com",
+  "by": "por"
 }

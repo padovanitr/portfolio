@@ -142,7 +142,7 @@ export const StyleIconButtonTheme = styled(IconButton)(
 
 export const SocialMediaContainer = styled(Box)(
   ({ theme }) => css`
-    display: flex;
+    display: none;
     padding: ${theme.spacing(0, 2)};
     margin: ${theme.spacing(0, 1, 0, 3)};
     gap: ${theme.spacing(2)};
@@ -151,6 +151,10 @@ export const SocialMediaContainer = styled(Box)(
 
     ${theme.breakpoints.up('md')} {
       margin: ${theme.spacing(0, 3)};
+    }
+
+    ${theme.breakpoints.up('md')} {
+      display: flex;
     }
   `
 )
