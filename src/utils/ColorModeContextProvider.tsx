@@ -1,9 +1,11 @@
 import { Shadows, ThemeProvider, createTheme } from '@mui/material'
-import { createContext, useMemo, useState } from 'react'
+import { createContext, useEffect, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
 import { colors } from './colors'
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {}, mode: '' })
+
+type ThemeType = 'light' | 'dark'
 
 export interface ColorModeContextProviderProps {
   children: ReactNode | JSX.Element | JSX.Element[]
@@ -17,7 +19,9 @@ shadows[4] = '0px 0px 6px rgba(46, 49, 146, 0.18)'
 shadows[5] = '0px 4px 16px 0px rgba(92, 92, 92, 0.09)'
 
 export default function ColorModeContextProvider({ children }: ColorModeContextProviderProps) {
-  const [mode, setMode] = useState<'light' | 'dark'>('dark')
+  const [mode, setMode] = useState<ThemeType>('dark')
+  const [localStorageflag, setLocalStorageflag] = useState(false)
+
   const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
@@ -27,6 +31,20 @@ export default function ColorModeContextProvider({ children }: ColorModeContextP
     }),
     [mode]
   )
+
+  useEffect(() => {
+    const storedPreference = localStorage.getItem('currentTheme')
+    if (storedPreference) {
+      setMode(storedPreference as ThemeType)
+    }
+    setLocalStorageflag(true)
+  }, [])
+
+  useEffect(() => {
+    if (localStorageflag) {
+      localStorage.setItem('currentTheme', mode)
+    }
+  }, [mode, localStorageflag])
 
   const theme = useMemo(
     () =>
