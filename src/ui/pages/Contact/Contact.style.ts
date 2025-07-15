@@ -13,7 +13,7 @@ import { colors } from '../../../utils/colors'
 
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
-    background-color: ${theme.palette.background.default};
+    background-color: ${theme.palette.background.paper};
     height: fit-content;
     width: 100%;
     margin: 0;
