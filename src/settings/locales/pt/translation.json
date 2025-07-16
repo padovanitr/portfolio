@@ -45,5 +45,9 @@
   "readMore": "Leia mais",
   "buyMeACoffee": "Me pague um café",
   "madeWith": "Feito com",
-  "by": "por"
+  "by": "por",
+  "myProjects": "Meus Projetos",
+  "projectsDescription": "Aqui estão alguns dos projetos que tenho atualmente em produção.",
+  "techUsed": "Tecnologias utilizadas:",
+  "view": "Ver"
 }

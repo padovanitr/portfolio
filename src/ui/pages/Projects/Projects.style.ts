@@ -61,17 +61,16 @@ export const StyledGridContainer = styled(Grid)(
     display: grid;
     grid-template-columns: 1fr;
     margin: 0 auto;
-    gap: ${theme.spacing(6)};
+    gap: ${theme.spacing(20)};
     margin-top: ${theme.spacing(2)};
 
     ${theme.breakpoints.up('md')} {
-      gap: ${theme.spacing(3)};
       grid-template-columns: repeat(2, 1fr);
     }
 
     ${theme.breakpoints.up('lg')} {
       grid-template-columns: repeat(2, 1fr);
-      gap: ${theme.spacing(10)};
+      gap: ${theme.spacing(20)};
     }
   `
 )

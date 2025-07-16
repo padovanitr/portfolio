@@ -1,12 +1,19 @@
-import { Box, Button, Paper, Typography, css, styled } from '@mui/material'
+import { Box, Button, Paper, SvgIcon, Typography, css, styled } from '@mui/material'
 import { colors } from '../../../utils/colors'
+import { StyledSvgIconType } from '../../../utils/types'
 
 export const StyledPaperContainer = styled(Paper)(
   ({ theme }) => css`
     cursor: pointer;
-    background: ${theme.palette.mode === 'dark' ? colors.mainBlack : 'transaparent'};
+    background: transparent;
     max-width: 350px;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: ${theme.spacing(3)};
+    text-align: center;
+    box-shadow: none;
+    align-items: center;
 
     transition: ${theme.transitions.create(['transform', 'filter'], {
       easing: theme.transitions.easing.sharp,
@@ -33,30 +40,39 @@ export const StyledPaperContainer = styled(Paper)(
   `
 )
 
+export const CustomSvgIcon = styled(SvgIcon)(
+  ({ theme }) => css`
+    fill: ${theme.palette.mode === 'dark' ? colors.white : colors.darkGray};
+    height: 30px;
+    width: 30px;
+  `
+) as StyledSvgIconType
+
 export const StyledImage = styled(`img`)(
   ({ theme }) => css`
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    width: 350px;
-    height: 250px;
+    border-radius: 12px;
+    width: 150px;
+    height: 150px;
+    box-shadow: ${theme.shadows[2]};
   `
 )
 
 export const DescriptionContainer = styled(Box)(
   ({ theme }) => css`
     padding: ${theme.spacing(4)};
-    height: 200px;
+    height: auto;
   `
 )
 
 export const StyledTitle = styled(Typography)(
   ({ theme }) => css`
     color: ${theme.palette.mode === 'dark' ? colors.white : colors.mainBlack};
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     font-family: Poppins, sans-serif;
     font-weight: 600;
     line-height: 25px;
     margin-bottom: ${theme.spacing(2)};
+    margin-bottom: ${theme.spacing(5)};
   `
 )
 
@@ -67,6 +83,13 @@ export const StyledPreview = styled(Typography)(
     font-family: Poppins, sans-serif;
     font-weight: 300;
     line-height: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: ${theme.spacing(2)};
+    padding: ${theme.spacing(2, 0)};
+    border-radius: 12px;
   `
 )
 
@@ -98,7 +121,7 @@ export const StyledButton = styled(Button)(
 
 export const ButtonContainer = styled(Box)(
   ({ theme }) => css`
-    height: 130px;
+    height: 40px;
     width: 100%;
     display: flex;
     justify-content: center;

@@ -1,4 +1,5 @@
-import { Box } from '@mui/material'
+import { Box, Link } from '@mui/material'
+import { useTranslation } from 'react-i18next'
 import {
   ContentContainer,
   StyledContainer,
@@ -11,25 +12,30 @@ import { projectsInfo } from './Projects.utils'
 import ProjectCard from '../../components/ProjectCard'
 
 export default function Projects() {
+  const { t } = useTranslation()
   return (
     <StyledContainer id="articles">
       <ContentContainer>
         <Box>
-          <StyledTitle variant="h2">My Projects</StyledTitle>
-          <StyledDescription>
-            These are some of the projects I current have in production.
-          </StyledDescription>
+          <StyledTitle variant="h2">{t('myProjects')}</StyledTitle>
+          <StyledDescription>{t('projectsDescription')}</StyledDescription>
         </Box>
         <StyledGridContainer>
           {projectsInfo.map(({ title, id, image, url, stack, imageAlt }) => (
-            <ProjectCard
+            <Link
+              sx={{ textDecoration: 'none', position: 'relative' }}
               key={id}
-              title={title}
-              image={image}
-              imageAlt={imageAlt}
-              stack={stack}
-              url={url}
-            />
+              href={url}
+              target="_blank"
+            >
+              <ProjectCard
+                title={title}
+                image={image}
+                imageAlt={imageAlt}
+                stack={stack}
+                url={url}
+              />
+            </Link>
           ))}
         </StyledGridContainer>
       </ContentContainer>
