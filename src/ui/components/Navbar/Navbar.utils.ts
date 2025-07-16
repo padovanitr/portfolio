@@ -14,6 +14,10 @@ export const pages = (t: TFunction<'translation', undefined>) => [
     path: '#experience',
   },
   {
+    title: t('projects'),
+    path: '#projects',
+  },
+  {
     title: t('navbarArticles'),
     path: '#articles',
   },

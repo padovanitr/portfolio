@@ -14,7 +14,7 @@ import ProjectCard from '../../components/ProjectCard'
 export default function Projects() {
   const { t } = useTranslation()
   return (
-    <StyledContainer id="articles">
+    <StyledContainer id="projects">
       <ContentContainer>
         <Box>
           <StyledTitle variant="h2">{t('myProjects')}</StyledTitle>
