@@ -45,5 +45,10 @@
   "readMore": "Read more",
   "buyMeACoffee": "Buy me a coffee",
   "madeWith": "Made with",
-  "by": "by"
+  "by": "by",
+  "myProjects": "My Projects",
+  "projectsDescription": "Here are some of the projects I currently have on production.",
+  "techUsed": "Technologies used:",
+  "view": "View",
+  "projects": "Projects"
 }

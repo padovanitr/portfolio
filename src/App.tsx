@@ -6,6 +6,7 @@ import Articles from './ui/pages/Articles/Articles'
 import Contact from './ui/pages/Contact/Contact'
 import Home from './ui/pages/Home/Home'
 import Experience from './ui/pages/Experience/Experience'
+import Projects from './ui/pages/Projects/Projects'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Home />
       <About />
       <Experience />
+      <Projects />
       <Articles />
       <Contact />
       <Footer />

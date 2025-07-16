@@ -3,7 +3,7 @@ import { colors } from '../../../utils/colors'
 
 export const StyledContainer = styled(Box)(
   ({ theme }) => css`
-    background-color: ${theme.palette.background.paper};
+    background-color: ${theme.palette.background.default};
     height: auto;
     width: 100%;
     margin: 0;
@@ -80,7 +80,7 @@ export const StyledDescription = styled(Typography)(
 export const StyledGridContainer = styled(Grid)(
   ({ theme }) => css`
     display: grid;
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
     margin: 0 auto;
     gap: ${theme.spacing(6)};
     margin-top: ${theme.spacing(2)};
