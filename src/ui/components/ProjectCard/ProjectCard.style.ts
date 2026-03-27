@@ -51,8 +51,8 @@ export const CustomSvgIcon = styled(SvgIcon)(
 export const StyledImage = styled(`img`)(
   ({ theme }) => css`
     border-radius: 12px;
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     box-shadow: ${theme.shadows[2]};
   `
 )
@@ -76,7 +76,7 @@ export const StyledTitle = styled(Typography)(
   `
 )
 
-export const StyledPreview = styled(Typography)(
+export const StyledPreview = styled(Box)(
   ({ theme }) => css`
     color: ${theme.palette.secondary.contrastText};
     font-size: 1rem;
@@ -125,5 +125,17 @@ export const ButtonContainer = styled(Box)(
     width: 100%;
     display: flex;
     justify-content: center;
+  `
+)
+
+export const StyledDescription = styled(Typography)(
+  ({ theme }) => css`
+    color: ${theme.palette.secondary.contrastText};
+    font-size: 1rem;
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: ${theme.spacing(2)};
   `
 )

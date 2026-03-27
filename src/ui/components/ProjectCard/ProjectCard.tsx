@@ -6,6 +6,7 @@ import {
   CustomSvgIcon,
   DescriptionContainer,
   StyledButton,
+  StyledDescription,
   StyledImage,
   StyledPaperContainer,
   StyledPreview,
@@ -18,15 +19,24 @@ export interface ProjectCardProps {
   stack: { title: string; icon?: FunctionComponent<SVGProps<SVGSVGElement>> }[]
   imageAlt: string
   url: string
+  description: string
 }
 
-export default function ProjectCard({ image, title, stack, imageAlt, url }: ProjectCardProps) {
+export default function ProjectCard({
+  image,
+  title,
+  stack,
+  imageAlt,
+  url,
+  description,
+}: ProjectCardProps) {
   const { t } = useTranslation()
   return (
     <StyledPaperContainer>
       <StyledImage src={image} alt={imageAlt} />
       <DescriptionContainer>
         <StyledTitle>{title}</StyledTitle>
+        <StyledDescription>{description}</StyledDescription>
         <Typography variant="body2" sx={{ marginBottom: 2 }}>
           {t('techUsed')}
         </Typography>

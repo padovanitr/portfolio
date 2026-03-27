@@ -1,13 +1,9 @@
 import { FunctionComponent, SVGProps } from 'react'
-import BabyMensiIcon from '../../../assets/img/babymensi-icon.png'
-import OwnPaletteIcon from '../../../assets/img/palette-icon.png'
+import BrainIcon from '../../../assets/img/brain.png'
 import {
-  InngestIcon,
   MixpanelIcon,
   NextjsIcon,
-  OpenaiIcon,
   PostgresqlIcon,
-  PrismaIcon,
   StripeIcon,
   SupabaseIcon,
   TailwindcssIcon,
@@ -18,6 +14,7 @@ import {
 export type ProjectInfoType = {
   id: number
   title: string
+  description: string
   stack: {
     title: string
     icon?: FunctionComponent<SVGProps<SVGSVGElement>>
@@ -28,7 +25,7 @@ export type ProjectInfoType = {
 }
 
 export const projectsInfo: ProjectInfoType[] = [
-  {
+  /* {
     id: 1,
     title: 'BabyMensi',
     stack: [
@@ -64,5 +61,23 @@ export const projectsInfo: ProjectInfoType[] = [
     url: 'https://www.ownpalette.com/',
     image: OwnPaletteIcon,
     imageAlt: 'Own Palette project details',
+  }, */
+  {
+    id: 1,
+    title: 'GuessWho',
+    description: 'A fun and interactive guessing game built with Next.js and TypeScript.',
+    stack: [
+      { title: 'Next.js', icon: NextjsIcon },
+      { title: 'TypeScript', icon: TypescriptIcon },
+      { title: 'Tailwind CSS', icon: TailwindcssIcon },
+      { title: 'PostgreSQL', icon: PostgresqlIcon },
+      { title: 'Supabase', icon: SupabaseIcon },
+      { title: 'Vercel', icon: VercelIcon },
+      { title: 'Stripe', icon: StripeIcon },
+      { title: 'Mixpanel', icon: MixpanelIcon },
+    ],
+    url: 'https://guess-who-ashen.vercel.app/',
+    image: BrainIcon,
+    imageAlt: 'GuessWho project details',
   },
 ]

@@ -21,7 +21,7 @@ export default function Projects() {
           <StyledDescription>{t('projectsDescription')}</StyledDescription>
         </Box>
         <StyledGridContainer>
-          {projectsInfo.map(({ title, id, image, url, stack, imageAlt }) => (
+          {projectsInfo.map(({ title, id, image, url, stack, imageAlt, description }) => (
             <Link
               sx={{ textDecoration: 'none', position: 'relative' }}
               key={id}
@@ -32,6 +32,7 @@ export default function Projects() {
                 title={title}
                 image={image}
                 imageAlt={imageAlt}
+                description={description}
                 stack={stack}
                 url={url}
               />
